@@ -1,15 +1,17 @@
 # Sebastian Mendel
 **Chief Technology Officer · Senior Engineering Leader**
 
-Leipzig · github.com/CybotTM
+Leipzig · linkedin.com/in/sebastian-mendel · github.com/CybotTM
 
 ---
 
 ## Profil
 
-**CTO der Netresearch DTT GmbH** mit über 18 Jahren technischer und unternehmerischer Verantwortung im selben Hause. Engineering-Tiefe trifft auf strategische Führung eines breiten Tech- und Service-Portfolios — von hochskalierten TYPO3- und Magento-Plattformen für Enterprise-Kunden in Tourismus, Logistik, Public Sector, Finance, Industrie und Media bis zur kompletten internen Plattform und R&D-Initiativen.
+**CTO der Netresearch DTT GmbH seit 2015** — über 28 Jahre IT-Erfahrung, davon 18 Jahre im selben Hause mit Karriere vom Senior Developer über Teamleiter Support hin zum CTO. Engineering-Tiefe trifft auf strategische Führung eines breiten Tech- und Service-Portfolios: von hochskalierten TYPO3- und Magento-Plattformen für Enterprise-Kunden in Tourismus, Logistik, Public Sector, Finance, Industrie und Media bis zur kompletten internen Plattform und R&D-Initiativen.
 
 Aktueller Schwerpunkt: **AI-operable Systems**, agentische Tooling-Plattformen und strukturelle Resilienz governierter Engineering-Organisationen. Initiator und Treiber der unternehmensweiten Einführung agentischer Entwicklung mit Claude Code, eines Skill-Marketplaces und eines unternehmensinternen Trainingsprogramms für das Engineering-Team.
+
+Daneben langjähriger Open-Source-Contributor (u.a. **phpMyAdmin Core, 2005–2015**) und aktiver Mitgestalter im TYPO3-Ökosystem.
 
 ---
 
@@ -27,8 +29,14 @@ Aktueller Schwerpunkt: **AI-operable Systems**, agentische Tooling-Plattformen u
 
 ## Berufserfahrung
 
-### Netresearch (verschiedene Rechtsformen), Leipzig — seit 2008 (18 Jahre)
-**Chief Technology Officer** *(Netresearch DTT GmbH)*
+### Netresearch (verschiedene Rechtsformen), Leipzig — seit September 2008 (17 J. 8 M.)
+**Chief Technology Officer** *(Netresearch DTT GmbH)* — seit Mai 2015 (~11 Jahre)
+- *Aug 2018 – heute*: CTO (Hybrid)
+- *Mai 2015 – Juli 2018*: CTO (vor Ort)
+
+**Frühere Rollen bei Netresearch:**
+- *Okt 2011 – Jan 2016*: Teamleiter Support (parallel zur Senior-Developer-Rolle) — technische Bestandskundenbetreuung, Notfallmanagement, technische Vorplanung von Projekten, interner Support für Entwicklertools, Verteilung und Kontrolle von Kundenanfragen
+- *Sept 2008 – Juli 2018*: Senior Developer — Entwicklung und Betreuung TYPO3-Erweiterungen
 
 Technische Gesamtverantwortung für die Engineering-Organisation eines mittelständischen IT-Dienstleisters (gegründet 1998) mit breitem Enterprise-Kundenportfolio im DACH-Raum.
 
@@ -67,8 +75,19 @@ In allen Fällen: **strategische Entscheidung und treibender Motor**, beratende 
 
 ---
 
-### Stationen vor Netresearch
-*(zu ergänzen)*
+### phpMyAdmin — Selbstständig / Open Source Contributor (2005 – 2015, 10 Jahre)
+Developer am phpMyAdmin-Projekt, einer der weltweit meistgenutzten Web-Anwendungen für die MySQL-/MariaDB-Administration. Schwerpunkte: SQL, MySQL, PHP-Backend.
+
+### KFP, Nürnberg — Softwareentwickler (Oktober 2001 – September 2008, 7 Jahre)
+Vollzeit. Schwerpunkte:
+- Entwicklung und Betreuung Web-Auftritt (PHP)
+- Entwicklung und Betreuung CRM (Eigenentwicklung in PHP)
+- Entwicklung und Betreuung Haussteuerung (Modbus, WAGO)
+- Betreuung der IT-Infrastruktur (Linux, Windows, Netzwerk)
+- Interner Support
+
+### BRZ Deutschland GmbH Datenverarbeitung, Nürnberg — Fachinformatiker (Azubi) (Februar 1998 – Oktober 2001, 3 J. 9 M.)
+Ausbildung Fachinformatiker Systemintegration. Erstellung und Pflege Webseite (CFM); Support/Reparatur Sybase-Datenbanken; Computer-Hardware, Netzwerktechnik.
 
 ---
 
@@ -117,7 +136,8 @@ Eigenständig betriebenes Matrix-Deployment mit Synapse, Element, LDAP-SSO, AI-B
 
 ## Open Source & Community
 
-- **TYPO3 Ecosystem** — Mitwirkung an Documentation Tooling (`render-guides`, `ddev-typo3-docs`, `TYPO3CMS-Reference-CoreApi`, mehrere Tutorials), Extension-Tooling (`tailor`, `t3x-rte_ckeditor_image`), öffentliche Claude-Code-Skills (`typo3-extension-analyzer-skill`, `typo3-update-issues`, `dxp-frontend`)
+- **phpMyAdmin** (2005–2015, 10 Jahre als selbstständiger Developer) — Beiträge zu Core, MySQL/SQL-Funktionalität
+- **TYPO3 Ecosystem** — Mitwirkung an Documentation Tooling (`render-guides`, `ddev-typo3-docs`, `TYPO3CMS-Reference-CoreApi`, mehrere Tutorials), Extension-Tooling (`tailor`, `t3x-rte_ckeditor_image`), öffentliche Claude-Code-Skills (`typo3-extension-analyzer-skill`, `typo3-update-issues`, `dxp-frontend`); Aktiv in der TYPO3 User Group Leipzig (TUGLE)
 - **Matrix Ecosystem** — Beiträge zu `matrix-docker-ansible-deploy`
 - **Sonstige OSS** — Beiträge / Forks im Umfeld von `traefik`, `weaviate`, `ddev`, `ldap-manager`, `raybeam`, `cloudfuse`, `ocf-scheduler`
 - **Eigene Repos** — `kidsync` (privacy-first co-parenting app, Kotlin, E2EE), `wow-quickroute` (WoW-Addon, Lua), `typo3-extension-analyzer-skill`
@@ -143,10 +163,22 @@ Eigenständig betriebenes Matrix-Deployment mit Synapse, Element, LDAP-SSO, AI-B
 
 ## Sprachen
 
-*(zu ergänzen)*
+- **Deutsch** — Muttersprache
+- **Englisch** — Gute Kenntnisse in Wort und Schrift
 
 ---
 
 ## Ausbildung
 
-*(zu ergänzen)*
+### Fachinformatiker Systemintegration
+**Staatliche Berufsschule Erlangen** — 1998 – 2001
+Schwerpunkte: Netzwerkadministration, Informationstechnologie
+
+### Anlagenmechaniker Versorgungstechnik
+**Berufliches Schulzentrum 4 der Stadt Leipzig** — 1996 – 1998
+
+---
+
+## Zertifikate
+
+- **Docker for Developers** — LinkedIn (März 2024)
