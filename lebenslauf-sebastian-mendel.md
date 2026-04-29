@@ -1,13 +1,13 @@
-# Sebastian Mendel
+# Sebastian Tobias Mendel genannt Mendelsohn
 **Chief Technology Officer · Senior Engineering Leader**
 
-Leipzig · linkedin.com/in/sebastian-mendel · github.com/CybotTM
+Leipzig (Wohn- und Geburtsort) · linkedin.com/in/sebastian-mendel · github.com/CybotTM
 
 ---
 
 ## Profil
 
-**CTO der Netresearch DTT GmbH seit 2015** — über 28 Jahre IT-Erfahrung, davon 18 Jahre im selben Hause mit Karriere vom Senior Developer über Teamleiter Support hin zum CTO. Engineering-Tiefe trifft auf strategische Führung eines breiten Tech- und Service-Portfolios: von hochskalierten TYPO3- und Magento-Plattformen für Enterprise-Kunden in Tourismus, Logistik, Public Sector, Finance, Industrie und Media bis zur kompletten internen Plattform und R&D-Initiativen.
+**CTO der Netresearch DTT GmbH seit 2015** — über 28 Jahre Berufserfahrung in der IT (Computer-Affinität seit 1989, Internet-Praxis seit 1995), davon 18 Jahre im selben Hause mit Karriere vom Senior Developer über Teamleiter Support hin zum CTO. Engineering-Tiefe trifft auf strategische Führung eines breiten Tech- und Service-Portfolios: von hochskalierten TYPO3- und Magento-Plattformen für Enterprise-Kunden in Tourismus, Logistik, Public Sector, Finance, Industrie und Media bis zur kompletten internen Plattform und R&D-Initiativen.
 
 Aktueller Schwerpunkt: **AI-operable Systems**, agentische Tooling-Plattformen und strukturelle Resilienz governierter Engineering-Organisationen. Initiator und Treiber der unternehmensweiten Einführung agentischer Entwicklung mit Claude Code, eines Skill-Marketplaces und eines unternehmensinternen Trainingsprogramms für das Engineering-Team.
 
@@ -86,7 +86,7 @@ Vollzeit. Schwerpunkte:
 - Betreuung der IT-Infrastruktur (Linux, Windows, Netzwerk)
 - Interner Support
 
-### BRZ Deutschland GmbH Datenverarbeitung, Nürnberg — Fachinformatiker (Azubi) (Februar 1998 – Oktober 2001, 3 J. 9 M.)
+### BRZ Deutschland GmbH Datenverarbeitung *(vormals Deutsches Baurechenzentrum GmbH)*, Nürnberg — Fachinformatiker (Azubi) (Februar 1998 – Oktober 2001, 3 J. 9 M.)
 Ausbildung Fachinformatiker Systemintegration. Erstellung und Pflege Webseite (CFM); Support/Reparatur Sybase-Datenbanken; Computer-Hardware, Netzwerktechnik.
 
 ---
@@ -174,8 +174,11 @@ Eigenständig betriebenes Matrix-Deployment mit Synapse, Element, LDAP-SSO, AI-B
 **Staatliche Berufsschule Erlangen** — 1998 – 2001
 Schwerpunkte: Netzwerkadministration, Informationstechnologie
 
-### Anlagenmechaniker Versorgungstechnik
-**Berufliches Schulzentrum 4 der Stadt Leipzig** — 1996 – 1998
+### Anlagenmechaniker Versorgungstechnik *(abgebrochen)*
+**Hydraulik Markranstädt** (Ausbildungsbetrieb) · **Berufliches Schulzentrum 4 der Stadt Leipzig** (Berufsschule) — 1995 – 1998
+
+### Realschulabschluss
+1995
 
 ---
 
