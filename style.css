@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --nr-turquoise: #2F99A4;
+  --nr-orange: #FF4D00;
+  --nr-dark: #585961;
+  --nr-light: #f7f8f9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', -apple-system, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: var(--nr-dark);
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 48px;
+  background: #fff;
+}
+
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: var(--nr-dark);
+}
+
+h1 {
+  font-size: 28pt;
+  margin: 0 0 4px;
+  border-bottom: 4px solid var(--nr-turquoise);
+  padding-bottom: 8px;
+}
+
+h1 + p strong {
+  color: var(--nr-turquoise);
+  font-size: 13pt;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-size: 16pt;
+  color: var(--nr-turquoise);
+  margin-top: 28px;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e5e7e9;
+}
+
+h3 {
+  font-size: 12pt;
+  color: var(--nr-dark);
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+
+h3 strong { color: var(--nr-orange); }
+
+a {
+  color: var(--nr-turquoise);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--nr-turquoise);
+}
+
+ul, ol { padding-left: 20px; margin: 6px 0 12px; }
+li { margin-bottom: 3px; }
+
+strong { color: var(--nr-dark); font-weight: 600; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0 16px;
+  font-size: 9.5pt;
+}
+
+th {
+  background: var(--nr-turquoise);
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 6px 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #e5e7e9;
+  vertical-align: top;
+}
+
+tr:nth-child(even) td { background: var(--nr-light); }
+
+hr {
+  border: none;
+  height: 1px;
+  background: #e5e7e9;
+  margin: 24px 0;
+}
+
+code {
+  background: var(--nr-light);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 9.5pt;
+  color: var(--nr-orange);
+}
+
+em { color: #888; font-style: italic; }
+
+blockquote {
+  border-left: 3px solid var(--nr-orange);
+  margin-left: 0;
+  padding-left: 14px;
+  color: #777;
+}
+
+@media print {
+  body { padding: 16px; max-width: none; }
+  h2 { page-break-after: avoid; }
+  h3 { page-break-after: avoid; }
+  table { page-break-inside: avoid; }
+}

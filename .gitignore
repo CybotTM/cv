@@ -1,0 +1,19 @@
+# Lokale, nicht-öffentliche Fassung
+lebenslauf-internal-detailliert.md
+notes/
+
+# Build-Artefakte
+*.pdf
+*.docx
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Secrets
+.env
+.env.*
+!.env.example
