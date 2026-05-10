@@ -24,7 +24,9 @@ Erfahrung in Enterprise-, Public-Sector-, E-Commerce-, CMS- und Integrationsumfe
 - Modernisierung komplexer Legacy-, CMS-, Commerce- und Integrationslandschaften
 - Security-, Compliance-, Risiko-, Disaster-Recovery- und Business-Continuity-Dokumentation
 - Einführung strukturierter AI-unterstützter Engineering-Praktiken
-- Open-Source-Arbeit, technische Dokumentation und Entwickler-Enablement
+- Open-Source-Maintainership, technische Dokumentation und Entwickler-Enablement
+- Curriculum-Design, Mentoring und unternehmensinterne Trainingsprogramme
+- Stakeholder-Kommunikation, Presales-Beratung, Change-Management
 
 ## Berufserfahrung
 
@@ -64,7 +66,14 @@ Ausbildung mit Schwerpunkt Web, Datenbanken, Hardware, Netzwerk und Support.
 
 ## Open Source
 
-Langjähriger Open-Source-Hintergrund mit Beiträgen im phpMyAdmin- und TYPO3-Ökosystem. Schwerpunkt auf pragmatischer Softwareentwicklung, Wartbarkeit, Dokumentation und Zusammenarbeit in gewachsenen technischen Communities.
+Langjähriger Open-Source-Hintergrund mit Beiträgen seit 2005. Schwerpunkt auf pragmatischer Softwareentwicklung, Wartbarkeit, Dokumentation und Zusammenarbeit in gewachsenen technischen Communities.
+
+- **phpMyAdmin** (2005–2015) — Core-Beiträge zu MySQL-Administration, PHP-Backend und Dokumentation
+- **TYPO3-Ökosystem** — Beiträge zu Documentation Tooling (`phpDocumentor/guides`, TYPO3-Documentation-Infrastruktur, `codesnippet`, `t3docs-ci-deploy`); öffentliche Claude-Code-Skills (`typo3-extension-analyzer-skill`, `typo3-update-issues`, `dxp-frontend`); aktiv in der TYPO3 User Group Leipzig (TUGLE)
+- **Maintainer / Hauptbeiträger** — `netresearch/ldap-manager` (Go, LDAP-Operations-Tooling), `netresearch/ofelia` (Docker-basierter Job-Scheduler), `netresearch/go-cron` (DAG-Engine, Cron-Erweiterungen), `netresearch/claude-code-marketplace` (öffentlicher Skill-Marketplace)
+- **Sonstige OSS** — Beiträge u.a. zu `hybridauth/hybridauth`, `repowise-dev/repowise`, `gofiber/cli`, `Seagate/cloudfuse`, `matrix-docker-ansible-deploy`, `traefik`, `weaviate`, `ddev`
+- **Eigene Repos** — `kidsync` (Privacy-First Co-Parenting App, Kotlin, E2EE), `wow-quickroute` (Lua), `typo3-extension-analyzer-skill`
+- GitHub: **github.com/CybotTM** (40+ public repos, aktiv seit 2010)
 
 ## Technologiefelder
 
