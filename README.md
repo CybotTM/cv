@@ -1,32 +1,55 @@
 # CV as Code
 
-This repository contains a source-controlled CV workflow.
+Source-controlled CV workflow for Sebastian Mendel.
 
-## Principles
+Published version:
 
-- Markdown files in `src/` are the source of truth.
-- Public HTML/PDF files in `public/` are generated artifacts.
-- Private/source-detailed content remains separated from public variants.
+<https://cybottm.github.io/cv/>
 
-## Build requirements
+## Files
 
+| Path | Purpose |
+|---|---|
+| `src/cv-executive.de.md` | Short public executive CV |
+| `src/cv-technical.de.md` | More detailed public technical CV |
+| `public/index.html` | GitHub Pages entry point |
+| `public/cv-executive.de.html` | Generated executive HTML CV |
+| `public/cv-executive.de.pdf` | Generated executive PDF CV |
+| `public/cv-technical.de.html` | Generated technical HTML CV |
+| `public/cv-technical.de.pdf` | Generated technical PDF CV |
+| `assets/style.css` | Shared print-friendly stylesheet |
+| `Makefile` | Local build commands |
+
+## Build
+
+Requirements:
+
+- `make`
 - `pandoc`
 - `weasyprint`
-- `make`
 
-## Commands
+Build all generated files:
 
 ```bash
 make build
+```
+
+Check that generated files are up to date:
+
+```bash
+make check
+```
+
+Remove generated HTML/PDF files:
+
+```bash
 make clean
 ```
 
-## Important files
+## Source of truth
 
-- `src/cv-full.private.md`: private/full CV source
-- `src/cv-executive.de.md`: public executive CV (German)
-- `src/cv-technical.de.md`: public technical CV (German)
-- `assets/style.css`: shared stylesheet for generated HTML
-- `Makefile`: reproducible local build pipeline
-- `.github/workflows/build.yml`: CI build/check and GitHub Pages deployment
-- `public/`: generated public HTML/PDF outputs
+The Markdown files in `src/` are the source of truth. Files in `public/` are generated artifacts for GitHub Pages and downloadable HTML/PDF versions.
+
+## Publishing
+
+GitHub Pages serves the generated files from `public/`. The default published CV is `public/index.html`.

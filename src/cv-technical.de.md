@@ -1,57 +1,63 @@
-# Sebastian Tobias Mendel genannt Mendelsohn
+# Sebastian Mendel
 **Chief Technology Officer · Senior Engineering Leader**
 
-Leipzig · linkedin.com/in/sebastian-mendel · github.com/CybotTM
+[LinkedIn](https://linkedin.com/in/sebastian-mendel) · [GitHub](https://github.com/CybotTM) · [Executive CV](cv-executive.de.html) · [Executive PDF](cv-executive.de.pdf) · [Technical PDF](cv-technical.de.pdf)
 
 ---
 
 ## Profil
 
-CTO seit 2015 mit Schwerpunkt auf Engineering Governance, Plattformstrategie, Delivery-Modernisierung und operativ belastbaren Betriebsmodellen. Verbindet tiefes technisches Verständnis mit langfristiger Organisationsentwicklung.
+CTO seit 2015 mit Schwerpunkt auf Engineering Governance, Plattformstrategie, Delivery-Modernisierung und operativ belastbaren Betriebsmodellen. Verbindet tiefes technisches Verständnis mit langfristiger Organisationsentwicklung in Enterprise-, Public-Sector-, CMS-, Commerce- und Integrationskontexten.
 
 ## Kernkompetenzen
 
-- Technologische Führung, Architekturentscheidungen, RFC-basierte Entscheidungsprozesse
-- Plattform- und Betriebsmodernisierung in Enterprise- und Public-Sector-Kontexten
-- R&D und Enablement für AI-gestützte und agentische Entwicklungsansätze
+- Technologische Führung, Architekturentscheidungen und RFC-basierte Entscheidungsprozesse
+- Plattform- und Betriebsmodernisierung in komplexen Systemlandschaften
+- Aufbau zentraler interner Plattformdienste für CI/CD, Secrets, IAM, Kommunikation, Monitoring und Virtualisierung
 - Sicherheits- und Betriebsdokumentation für regulierte Enterprise- und Public-Sector-Kontexte
 - ISMS-nahe Dokumentation zu Governance, Risiko, Zugriff, Change, Incident, DR/BCP und Secure Coding
+- AI-unterstützte Engineering-Praktiken mit Fokus auf Qualität, Wiederholbarkeit und Team-Enablement
 
 ## Berufserfahrung
 
-### Netresearch (verschiedene Rechtsformen), Leipzig — seit 2008
-**Chief Technology Officer** (seit 2015)
+### Netresearch DTT GmbH / Netresearch, Leipzig (seit 2008)
 
-Ausgewählte Schwerpunkte:
+**Chief Technology Officer** · seit 2015  
+**Senior Developer / Team Lead Support** · 2008–2018
 
-- Strategische und technische Führung der Engineering-Organisation
-- Aufbau und Governance von Delivery- und Plattformstandards
-- zentrale interne Plattformdienste für CI/CD, Secrets, IAM, Kommunikation, Monitoring und Virtualisierung
+Ausgewählte Beiträge:
+
+- Governance und technische Weiterentwicklung einer zentralen Engineering-Plattform
+- Modernisierung von Delivery-, Build-, Release- und Backup-Prozessen
+- Einführung strukturierter Architekturentscheidungen und technischer RFC-Prozesse
 - Betriebs- und Incident-Unterstützung in kritischem Kundenumfeld
-- Modernisierung von Build-, Release-, Backup- und Betriebsprozessen
-- Technische Unterstützung für Presales, Roadmaps und Transformationsvorhaben
+- Technische Beratung in Presales, Roadmaps und Modernisierungsprogrammen
 
-Frühere Rollen:
-- Teamleitung Support
-- Senior Developer (TYPO3)
+### phpMyAdmin (2005–2015)
 
-### phpMyAdmin — Open-Source-Entwicklung (2005–2015)
+Open-Source-Beiträge im Bereich PHP/MySQL mit Fokus auf nachhaltige Weiterentwicklung, Wartbarkeit und Qualität.
 
-Beiträge im Bereich PHP/MySQL, Fokus auf nachhaltige Weiterentwicklung und Qualität.
+### KFP, Nürnberg (2001–2008)
 
-### Frühere Stationen
+Softwareentwicklung und Betrieb interner Web-, CRM- und Infrastruktursysteme (PHP, Linux, Windows, Netzwerk).
 
-- Softwareentwicklung und interne IT-Betreuung (2001–2008)
-- Ausbildung Fachinformatik Systemintegration (1998–2001)
+### BRZ Deutschland GmbH, Nürnberg (1998–2001)
 
-## Technologien & Methoden (Auszug)
+Ausbildung Fachinformatik Systemintegration mit Schwerpunkt Web, Datenbanken, Hardware, Netzwerk und Support.
 
-- Sprachen: PHP, Go, Python, TypeScript/JavaScript, Bash
-- Plattform & Ops: GitLab, CI/CD, Container/Virtualisierung, Cloud, Automatisierung
-- CMS/eCommerce: TYPO3, Magento
-- Methoden: evidenzbasiertes Engineering, TDD-nahe Qualitätssicherung, Architektur-Reviews
+## Technologiefelder
+
+- **Languages:** PHP, Go, Python, TypeScript, JavaScript, Bash, SQL
+- **Platforms:** Linux, Docker, GitLab, Concourse CI, Proxmox, AWS
+- **CMS / Commerce:** TYPO3, Magento, OroCommerce, Shopware, Akeneo
+- **Operations:** CI/CD, IAM, Secrets Management, Monitoring, Backup, DR/BCP
+- **Engineering:** Architecture Governance, RFCs, Developer Enablement, Technical Modernization
+
+## Open Source
+
+Langjährige Beiträge im phpMyAdmin- und TYPO3-Ökosystem mit Fokus auf technische Dokumentation, Tooling und wartbare Entwicklungsprozesse.
 
 ## Sprachen
 
-- Deutsch (Muttersprache)
-- Englisch (gut in Wort und Schrift)
+- Deutsch: Muttersprache
+- Englisch: verhandlungssicher / professionell
