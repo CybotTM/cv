@@ -83,13 +83,8 @@ jobs:
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
         with:
-          # Lighthouse rejects file:// URLs; treosh action spins up a server for staticDistDir.
-          # All three paths are scanned by Lighthouse against http://localhost:<port>/<url>.
-          staticDistDir: ./public
-          urls: |
-            /index.html
-            /cv-executive.de.html
-            /cv-technical.de.html
+          # URLs and staticDistDir live in .lighthouserc.json so the local
+          # `npx lhci autorun` workflow stays in sync with CI.
           uploadArtifacts: true
           temporaryPublicStorage: true
           configPath: ./.lighthouserc.json

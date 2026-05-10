@@ -1,6 +1,12 @@
 {
   "ci": {
     "collect": {
+      "staticDistDir": "./public",
+      "url": [
+        "http://localhost/index.html",
+        "http://localhost/cv-executive.de.html",
+        "http://localhost/cv-technical.de.html"
+      ],
       "settings": {
         "preset": "desktop",
         "onlyCategories": ["performance", "accessibility", "best-practices", "seo"]
