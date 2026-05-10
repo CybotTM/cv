@@ -405,6 +405,12 @@ def render_index(
             "Über 25 Jahre IT-Erfahrung mit Schwerpunkt auf Engineering-Governance, "
             "Plattformarchitektur und Modernisierung komplexer Systemlandschaften."
         ),
+        mantra=(
+            "Mein Fokus liegt auf langlebigen technischen Strukturen: "
+            "Wissen aus Silos holen, Komplexität erklärbar machen und "
+            "Teams so befähigen, dass Systeme nicht von einzelnen "
+            "Schlüsselpersonen abhängen."
+        ),
         variants=[
             {
                 "title": v.front["title"],

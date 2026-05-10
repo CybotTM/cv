@@ -13,9 +13,19 @@ og_locale: de_DE
 
 ## Profil
 
-CTO und Senior Engineering Leader mit über 25 Jahren IT-Erfahrung. Schwerpunkt: technische Strategie, Engineering-Governance, Plattformarchitektur, Modernisierung komplexer Systemlandschaften sowie sichere und pragmatische Einführung neuer Entwicklungsmethoden.
+CTO und Senior Engineering Leader mit über 25 Jahren IT-Erfahrung. Schwerpunkt: Aufbau resilienter technischer Organisationen, Engineering-Governance, Plattformarchitektur, Modernisierung komplexer Systemlandschaften sowie sichere und pragmatische Einführung neuer Entwicklungsmethoden.
 
 Erfahrung in Enterprise-, Public-Sector-, E-Commerce-, CMS- und Integrationsumfeldern. Langjähriger Open-Source-Hintergrund, unter anderem im phpMyAdmin- und TYPO3-Ökosystem.
+
+## Was mich antreibt
+
+Ich möchte verhindern, dass Unternehmen von unsichtbarem Wissen, einzelnen Schlüsselpersonen oder historisch gewachsenen Zufällen abhängig bleiben.
+
+Mein Antrieb ist es, langlebige technische und organisatorische Strukturen zu schaffen: Wissen sichtbar machen, Silos abbauen, Flaschenhälse reduzieren, Entscheidungen nachvollziehbar dokumentieren und Teams so aufstellen, dass sie auch unter Wachstum, Wandel und Belastung handlungsfähig bleiben.
+
+Technische Führung verstehe ich als Multiplikatorrolle. Gute Plattformen, Standards und Prozesse sollen Menschen nicht einschränken, sondern mentale Last reduzieren, Verantwortung teilbar machen und Freiraum schaffen, damit Teams sicher liefern und Neues ausprobieren können.
+
+Dazu gehört für mich auch, technische Black Boxes zu öffnen: neue Werkzeuge, Risiken und komplexe Systeme zu verstehen, zu erklären und so aufzubereiten, dass andere damit bessere Entscheidungen treffen können. Gute Technik ist nicht nur funktional, sondern nachvollziehbar, wartbar und respektvoll gegenüber den Menschen, die mit ihr arbeiten.
 
 ## Kernkompetenzen
 

@@ -282,7 +282,18 @@ body {
   font-family: var(--serif);
   font-size: 1.18rem;
   line-height: 1.55;
-  margin: 0 0 1.4rem;
+  margin: 0 0 0.9rem;
+}
+
+.cv--index .mantra {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--color-muted);
+  margin: 0 0 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-accent);
 }
 
 .version-list {
