@@ -1,28 +1,33 @@
-# Sebastian Tobias Mendel genannt Mendelsohn
-**Chief Technology Officer · Engineering Governance · Platform Engineering · Agentic AI Enablement**
+# Sebastian Mendel
+**Chief Technology Officer · Engineering Governance · Platform Engineering · Technical Modernization**
 
-Leipzig · linkedin.com/in/sebastian-mendel · github.com/CybotTM
+[LinkedIn](https://linkedin.com/in/sebastian-mendel) · [GitHub](https://github.com/CybotTM) · [Executive PDF](cv-executive.de.pdf) · [Technical CV](cv-technical.de.html) · [Technical PDF](cv-technical.de.pdf)
 
 ---
 
 ## Profil
 
-CTO und Senior Engineering Leader mit über 25 Jahren IT-Erfahrung. Fokus auf den Aufbau resilienter Engineering-Organisationen, Platform Engineering, Security/Compliance, Modernisierung sowie agentische AI-Enablenment in der Softwareentwicklung.
+CTO und Senior Engineering Leader mit über 25 Jahren IT-Erfahrung. Schwerpunkt: technische Strategie, Engineering-Governance, Plattformarchitektur, Modernisierung komplexer Systemlandschaften sowie sichere und pragmatische Einführung neuer Entwicklungsmethoden.
 
-Langjähriger Open-Source-Hintergrund, unter anderem im phpMyAdmin-Umfeld und im TYPO3-Ökosystem.
+Erfahrung in Enterprise-, Public-Sector-, E-Commerce-, CMS- und Integrationsumfeldern. Langjähriger Open-Source-Hintergrund, unter anderem im phpMyAdmin- und TYPO3-Ökosystem.
 
 ## Kernkompetenzen
 
-- Technologie- und Engineering-Strategie auf C-Level
-- Engineering Governance, Architekturentscheidungen und RFC-Prozesse
-- Plattform- und Delivery-Modernisierung
-- Security-, Risk- und Compliance-nahe Engineering-Steuerung
-- Agentische AI-Enablement-Programme und Team-Befähigung
-- Technische Beratung in Presales und Kundenroadmaps
+- Technische Strategie, Architekturentscheidungen und Engineering-Governance
+- Plattformarchitektur, CI/CD, DevOps, Betriebsprozesse und interne Developer-Plattformen
+- Modernisierung komplexer Legacy-, CMS-, Commerce- und Integrationslandschaften
+- Security-, Compliance-, Risiko-, Disaster-Recovery- und Business-Continuity-Dokumentation
+- Einführung strukturierter AI-unterstützter Engineering-Praktiken
+- Open-Source-Arbeit, technische Dokumentation und Entwickler-Enablement
 
 ## Berufserfahrung
 
-### Netresearch, Leipzig — Chief Technology Officer (seit 2015)
+### Netresearch DTT GmbH / Netresearch, Leipzig
+
+**Chief Technology Officer** · seit 2015  
+**Senior Developer / Team Lead Support** · 2008–2018
+
+Verantwortung für technische Strategie, Engineering-Governance und Plattformarchitektur eines mittelständischen IT-Dienstleisters mit Enterprise-, Public-Sector-, E-Commerce-, CMS- und Integrationsprojekten.
 
 Ausgewählte Wirkung:
 
@@ -30,19 +35,40 @@ Ausgewählte Wirkung:
 - Einführung strukturierter Architekturentscheidungen und technischer RFC-Prozesse
 - Modernisierung unternehmenskritischer Delivery-, Backup- und Betriebsprozesse
 - Sicherheits- und Compliance-Dokumentation für regulierte Enterprise- und Public-Sector-Umfelder
-- Aufbau eines internen Programms für agentische Softwareentwicklung und AI-gestützte Engineering-Workflows
+- Strukturierte Einführung AI-unterstützter Engineering-Praktiken mit Fokus auf Governance, Wiederholbarkeit, Qualität und Entwicklerproduktivität
 - Technische Beratung in Presales, Kundenroadmaps und Modernisierungsprogrammen
 
-### Open Source (u.a. phpMyAdmin, TYPO3)
+### phpMyAdmin
 
-- Langjährige Beiträge im OSS-Umfeld mit Fokus auf Engineering-Tooling, Qualität und Dokumentation
-- Community-Mitwirkung und Wissenstransfer in technischen Ökosystemen
+**Open Source Contributor** · 2005–2015
 
-## Technologien (Auszug)
+Langjährige Mitarbeit an einer der weltweit meistgenutzten Web-Anwendungen zur MySQL-/MariaDB-Administration. Schwerpunkt: PHP, SQL, MySQL, Backend-Entwicklung und technische Dokumentation.
 
-Platform Engineering, CI/CD, Cloud & Virtualisierung, Governance & Security, TYPO3/Magento, PHP/Go/Python/TypeScript, AI-gestützte Engineering-Workflows.
+### KFP, Nürnberg
+
+**Softwareentwickler** · 2001–2008
+
+Entwicklung und Betreuung interner Web-, CRM- und Infrastruktur-Systeme mit PHP, Linux, Windows und Netzwerktechnik.
+
+### BRZ Deutschland GmbH, Nürnberg
+
+**Fachinformatiker Systemintegration** · 1998–2001
+
+Ausbildung mit Schwerpunkt Web, Datenbanken, Hardware, Netzwerk und Support.
+
+## Open Source
+
+Langjähriger Open-Source-Hintergrund mit Beiträgen im phpMyAdmin- und TYPO3-Ökosystem. Schwerpunkt auf pragmatischer Softwareentwicklung, Wartbarkeit, Dokumentation und Zusammenarbeit in gewachsenen technischen Communities.
+
+## Technologiefelder
+
+- **Languages:** PHP, Go, Python, TypeScript, JavaScript, Bash, SQL
+- **Platforms:** Linux, Docker, GitLab, Concourse CI, Proxmox, AWS
+- **CMS / Commerce:** TYPO3, Magento, OroCommerce, Shopware, Akeneo
+- **Operations:** CI/CD, IAM, Secrets Management, Monitoring, Backup, DR/BCP
+- **Engineering:** Architecture Governance, RFCs, Developer Enablement, Technical Modernization
 
 ## Sprachen
 
-- Deutsch (Muttersprache)
-- Englisch (beruflich)
+- Deutsch: Muttersprache
+- Englisch: verhandlungssicher / professionell
