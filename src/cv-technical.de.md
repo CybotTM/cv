@@ -59,11 +59,14 @@ Ausbildung Fachinformatik Systemintegration mit Schwerpunkt Web, Datenbanken, Ha
 
 ## Technologiefelder
 
-- **Languages:** PHP, Go, Python, TypeScript, JavaScript, Bash, SQL
-- **Platforms:** Linux, Docker, GitLab, Concourse CI, Proxmox, AWS
+- **Languages:** PHP, Go, Python, Rust, TypeScript, JavaScript, Bash, SQL
+- **Platforms:** Linux, Windows, Docker, Docker Swarm, Proxmox, VMware, AWS
 - **CMS / Commerce:** TYPO3, Magento, OroCommerce, Shopware, Akeneo
-- **Operations:** CI/CD, IAM, Secrets Management, Monitoring, Backup, DR/BCP
-- **Engineering:** Architecture Governance, RFCs, Developer Enablement, Technical Modernization
+- **AI Tooling:** Claude Code (Skills, Plugins, Marketplace), ChatGPT, Anthropic API, OpenAI API, Ollama, Model Context Protocol
+- **Communication & Collaboration:** Matrix / Synapse, Jira, Confluence, Google Workspace
+- **Operations:** CI/CD, GitHub, GitLab, Concourse CI, IAM, LDAP / Active Directory, Secrets Management (HashiCorp Vault), Ansible, Terraform / OpenTofu, Backup, DR/BCP
+- **Observability:** Sentry, New Relic, Instana, ELK Stack, Grafana, Prometheus
+- **Engineering:** Architecture Governance, RFCs, ADR-Kultur, Developer Enablement, Technical Modernization, AI-assisted Engineering
 
 ## Open Source
 
