@@ -1,8 +1,14 @@
-# Sebastian Mendel
-**Chief Technology Officer · Senior Engineering Leader**
-
-[LinkedIn](https://linkedin.com/in/sebastian-mendel) · [GitHub](https://github.com/CybotTM) · [Executive CV](cv-executive.de.html) · [Executive PDF](cv-executive.de.pdf) · [Technical PDF](cv-technical.de.pdf)
-
+---
+variant: technical
+short_label: Technical
+lang: de
+title: "Sebastian Mendel — Technical CV"
+description: >-
+  Sebastian Mendel, CTO bei Netresearch DTT GmbH (Leipzig). Detaillierte
+  technische Fassung des Lebenslaufs: Engineering-Governance, Plattformbetrieb,
+  Sicherheit, Modernisierung in Enterprise- und Public-Sector-Kontexten.
+updated: "Mai 2026"
+og_locale: de_DE
 ---
 
 ## Profil

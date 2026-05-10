@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="author" content="{{ author.name }}">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#fbfaf6">
+  {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
+  <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+  {% if pdf_filename %}<link rel="alternate" type="application/pdf" href="{{ pdf_filename }}" title="{{ title }} (PDF)">{% endif %}
+
+  {# Open Graph #}
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  {% if canonical %}<meta property="og:url" content="{{ canonical }}">{% endif %}
+  <meta property="og:locale" content="{{ og_locale }}">
+  <meta property="profile:first_name" content="{{ author.first_name }}">
+  <meta property="profile:last_name" content="{{ author.last_name }}">
+
+  {# Twitter Card #}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+
+  {# Schema.org Person #}
+  <script type="application/ld+json">{{ jsonld | safe }}</script>
+
+  {# Self-hosted fonts: preload only the regular roman (most weight on critical path) #}
+  <link rel="preload" as="font" type="font/woff2"
+        href="{{ asset('fonts/SourceSerif4-Variable.woff2') }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2"
+        href="{{ asset('fonts/Inter-Variable.woff2') }}" crossorigin>
+
+  <link rel="stylesheet" href="{{ asset('style.css') }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Direkt zum Inhalt springen</a>
+  {% block body %}{% endblock %}
+</body>
+</html>

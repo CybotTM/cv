@@ -1,0 +1,51 @@
+{% extends "base.html.j2" %}
+{% block body %}
+<div class="cv cv--index">
+  <header class="cv-header">
+    <p class="kicker">Curriculum Vitae</p>
+    <h1>{{ author.name }}</h1>
+    <p class="role">{{ author.role }}</p>
+    <p class="location">{{ author.location }}</p>
+  </header>
+
+  <main id="main" class="cv-body">
+    <section>
+      <p class="lede">{{ lede }}</p>
+    </section>
+
+    <section aria-labelledby="versions-heading">
+      <h2 id="versions-heading">Versionen</h2>
+      <ul class="version-list">
+        {% for v in variants %}
+        <li>
+          <h3><a href="{{ v.html }}">{{ v.title }}</a></h3>
+          <p>{{ v.description }}</p>
+          <p class="version-meta">
+            <a href="{{ v.html }}">Online lesen</a> ·
+            <a href="{{ v.pdf }}" aria-label="{{ v.title }} als PDF herunterladen">PDF herunterladen</a>
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Kontakt</h2>
+      <ul class="contact-list">
+        {% for c in contacts %}
+        <li><a href="{{ c.href }}" rel="me"{% if c.get('aria') %} aria-label="{{ c.aria }}"{% endif %}>{{ c.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </main>
+
+  <footer class="cv-footer">
+    <p>
+      <small>
+        Gebaut {{ build_iso }} ·
+        <a href="https://github.com/CybotTM/cv">Quelltext auf GitHub</a>
+      </small>
+    </p>
+  </footer>
+</div>
+{% endblock %}

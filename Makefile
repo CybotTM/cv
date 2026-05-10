@@ -1,61 +1,40 @@
-PANDOC ?= pandoc
-WEASYPRINT ?= weasyprint
-CSS := assets/style.css
-PUBLIC := public
-SRC := src
+PYTHON ?= python3
+VENV   ?= .venv
 
-EXEC_MD := $(SRC)/cv-executive.de.md
-TECH_MD := $(SRC)/cv-technical.de.md
+.PHONY: help build serve clean install lighthouse
 
-EXEC_HTML := $(PUBLIC)/cv-executive.de.html
-TECH_HTML := $(PUBLIC)/cv-technical.de.html
-EXEC_PDF := $(PUBLIC)/cv-executive.de.pdf
-TECH_PDF := $(PUBLIC)/cv-technical.de.pdf
-INDEX_HTML := $(PUBLIC)/index.html
+help:
+	@echo "make install    - create venv and install dependencies"
+	@echo "make build      - build public/ from src/ (HTML + PDF)"
+	@echo "make serve      - build and serve public/ on http://localhost:8000"
+	@echo "make lighthouse - run a local Lighthouse audit (needs npx)"
+	@echo "make clean      - remove public/ and venv"
 
-.PHONY: build html pdf index check clean
+$(VENV)/bin/python:
+	$(PYTHON) -m venv $(VENV) || (which uv && uv venv $(VENV))
+	$(VENV)/bin/python -m pip install -U pip || $(VENV)/bin/python -m ensurepip --upgrade
+	$(VENV)/bin/python -m pip install -r requirements.txt
 
-build: html pdf index
-html: $(EXEC_HTML) $(TECH_HTML)
-pdf: $(EXEC_PDF) $(TECH_PDF)
-index: $(INDEX_HTML)
+install: $(VENV)/bin/python
 
-$(PUBLIC):
-	mkdir -p $(PUBLIC)
+build: install
+	$(VENV)/bin/python scripts/build.py
 
-$(EXEC_HTML): $(EXEC_MD) $(CSS) | $(PUBLIC)
-	@if command -v $(PANDOC) >/dev/null 2>&1; then \
-		$(PANDOC) $< -f markdown -t html5 --standalone --metadata title="Executive CV" --metadata lang="de" --css=../$(CSS) -o $@; \
-	else \
-		python3 scripts/render_html.py $< $@ ../$(CSS); \
-	fi
+serve: build
+	@echo "Serving public/ on http://localhost:8000"
+	$(PYTHON) -m http.server 8000 -d public
 
-$(TECH_HTML): $(TECH_MD) $(CSS) | $(PUBLIC)
-	@if command -v $(PANDOC) >/dev/null 2>&1; then \
-		$(PANDOC) $< -f markdown -t html5 --standalone --metadata title="Technical CV" --metadata lang="de" --css=../$(CSS) -o $@; \
-	else \
-		python3 scripts/render_html.py $< $@ ../$(CSS); \
-	fi
-
-$(EXEC_PDF): $(EXEC_HTML) $(CSS)
-	@if command -v $(WEASYPRINT) >/dev/null 2>&1; then \
-		$(WEASYPRINT) $< $@; \
-	else \
-		python3 scripts/render_pdf.py $< $@; \
-	fi
-
-$(TECH_PDF): $(TECH_HTML) $(CSS)
-	@if command -v $(WEASYPRINT) >/dev/null 2>&1; then \
-		$(WEASYPRINT) $< $@; \
-	else \
-		python3 scripts/render_pdf.py $< $@; \
-	fi
-
-$(INDEX_HTML): $(EXEC_HTML)
-	cp $(EXEC_HTML) $(INDEX_HTML)
-
-check: build
-	git diff --exit-code public/
+lighthouse: build
+	@echo "Running Lighthouse on built public/"
+	npx --yes lighthouse "file://$(CURDIR)/public/index.html" \
+	  --quiet --chrome-flags="--headless" \
+	  --output html --output-path ./lighthouse-index.html
+	npx --yes lighthouse "file://$(CURDIR)/public/cv-executive.de.html" \
+	  --quiet --chrome-flags="--headless" \
+	  --output html --output-path ./lighthouse-executive.html
+	npx --yes lighthouse "file://$(CURDIR)/public/cv-technical.de.html" \
+	  --quiet --chrome-flags="--headless" \
+	  --output html --output-path ./lighthouse-technical.html
 
 clean:
-	rm -f $(EXEC_HTML) $(TECH_HTML) $(EXEC_PDF) $(TECH_PDF) $(INDEX_HTML)
+	rm -rf public $(VENV) lighthouse-*.html

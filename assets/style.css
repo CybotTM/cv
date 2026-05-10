@@ -1,213 +1,397 @@
-:root {
-  --bg: #f6f8fb;
-  --page: #ffffff;
-  --text: #17202a;
-  --muted: #52616b;
-  --border: #d9e2ec;
-  --accent: #005f73;
-  --accent-soft: #e0f2f1;
+/* =========================================================================
+   Editorial CV — screen + print
+   Body: Source Serif 4 (variable), self-hosted
+   UI/headings: Inter (variable), self-hosted
+   ========================================================================= */
+
+@font-face {
+  font-family: "Source Serif 4 Variable";
+  src: url("fonts/SourceSerif4-Variable.woff2") format("woff2-variations"),
+       url("fonts/SourceSerif4-Variable.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4 Variable";
+  src: url("fonts/SourceSerif4-Variable-Italic.woff2") format("woff2-variations"),
+       url("fonts/SourceSerif4-Variable-Italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Variable";
+  src: url("fonts/Inter-Variable.woff2") format("woff2-variations"),
+       url("fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Variable";
+  src: url("fonts/Inter-Variable-Italic.woff2") format("woff2-variations"),
+       url("fonts/Inter-Variable-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
+/* -------- Tokens -------- */
+
+:root {
+  --serif: "Source Serif 4 Variable", ui-serif, Charter, "Iowan Old Style",
+           Cambria, Georgia, serif;
+  --sans:  "Inter Variable", system-ui, -apple-system, "Segoe UI",
+           Roboto, "Helvetica Neue", sans-serif;
+
+  --color-page:    #fbfaf6;
+  --color-text:    #1a1a1a;     /* > 16:1 on page */
+  --color-muted:   #5a5a5a;     /* > 7:1  on page */
+  --color-accent:  #7d2d3a;     /* deep wine, > 5.7:1 on page */
+  --color-rule:    rgba(0, 0, 0, 0.10);
+  --color-rule-bold: rgba(0, 0, 0, 0.18);
+  --color-link-underline: rgba(125, 45, 58, 0.45);
+
+  --measure: 36em;
+
+  --fs-base:  18px;
+  --fs-h1:    clamp(2rem, 4.5vw, 2.6rem);
+  --fs-h2:    0.92rem;
+  --fs-h3:    1.1rem;
+  --fs-kicker:0.75rem;
+  --fs-small: 0.85rem;
 }
+
+/* -------- Reset-ish -------- */
+
+*, *::before, *::after { box-sizing: border-box; }
 
 html {
-  font-size: 16px;
+  font-size: var(--fs-base);
+  background: var(--color-page);
+  color: var(--color-text);
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 48px 28px;
-  color: var(--text);
-  background: var(--bg);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  font-family: var(--serif);
   line-height: 1.62;
+  font-feature-settings: "kern", "liga", "onum";
+  font-variant-numeric: oldstyle-nums proportional-nums;
 }
 
-body > * {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+.skip-link {
+  position: absolute;
+  inset: auto auto auto -1000px;
+  background: var(--color-text);
+  color: var(--color-page);
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  z-index: 1000;
+}
+.skip-link:focus {
+  inset: 0 auto auto 0;
 }
 
-h1 {
-  margin: 0 0 0.35rem;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+/* -------- Article shell -------- */
+
+.cv {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
 }
 
-h1 + p {
-  margin-top: 0;
-  color: var(--muted);
-  font-size: 1.08rem;
+@media (min-width: 48em) {
+  .cv {
+    padding: 5rem 2rem 4rem;
+  }
 }
 
-h2 {
-  margin-top: 2.5rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--border);
-  font-size: 1.35rem;
-  letter-spacing: -0.015em;
+/* -------- Header -------- */
+
+.cv-header {
+  margin-bottom: 2.4rem;
 }
 
-h3 {
-  margin-top: 1.6rem;
-  margin-bottom: 0.25rem;
-  font-size: 1.08rem;
-}
-
-p {
-  margin: 0.75rem 0;
-}
-
-ul {
-  padding-left: 1.35rem;
-}
-
-li {
-  margin: 0.28rem 0;
-}
-
-a {
-  color: var(--accent);
+.kicker {
+  font-family: var(--sans);
+  font-size: var(--fs-kicker);
   font-weight: 500;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 0.6rem;
 }
 
-a:hover {
-  text-decoration-thickness: 2px;
+.cv-header h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: var(--fs-h1);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem;
 }
 
-hr {
-  margin: 1.8rem 0;
+.cv-header .role {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0 0 0.15rem;
+}
+
+.cv-header .location {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin: 0 0 1.25rem;
+}
+
+.meta-nav {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-rule);
+}
+
+.meta-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+}
+
+.meta-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-link-underline);
+  padding-bottom: 1px;
+}
+.meta-links a[aria-current="page"] {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* -------- Body -------- */
+
+.cv-body h2 {
+  font-family: var(--sans);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 2.6rem 0 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--color-rule-bold);
+}
+
+.cv-body h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  margin: 1.4rem 0 0.2rem;
+  letter-spacing: -0.005em;
+}
+
+.cv-body h4 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 1rem 0 0.3rem;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+}
+
+.cv-body p { margin: 0.6rem 0; }
+.cv-body p strong { font-weight: 600; }
+
+.cv-body ul,
+.cv-body ol {
+  padding-left: 1.2rem;
+  margin: 0.6rem 0 0.9rem;
+}
+.cv-body li { margin: 0.25rem 0; }
+.cv-body ul li::marker { color: var(--color-accent); }
+
+.cv-body a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-link-underline);
+  padding-bottom: 1px;
+}
+.cv-body a:hover,
+.cv-body a:focus {
+  background: rgba(125, 45, 58, 0.07);
+  border-bottom-color: var(--color-accent);
+}
+
+.cv-body hr {
   border: 0;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--color-rule);
+  margin: 2rem 0;
 }
 
-strong {
-  font-weight: 650;
+.cv-body em { font-style: italic; }
+
+.cv-body code {
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Consolas, monospace;
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
 }
 
-table {
-  width: 100%;
-  margin: 1.2rem 0;
-  border-collapse: collapse;
+/* -------- Footer -------- */
+
+.cv-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-rule);
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+}
+.cv-footer a {
+  color: var(--color-muted);
+  border-bottom: 1px dotted var(--color-rule-bold);
+  text-decoration: none;
+}
+
+/* -------- Index page -------- */
+
+.cv--index .lede {
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  line-height: 1.55;
+  margin: 0 0 1.4rem;
+}
+
+.version-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.version-list > li {
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--color-rule);
+}
+.version-list > li:last-child {
+  border-bottom: 1px solid var(--color-rule);
+}
+.version-list h3 { margin: 0 0 0.3rem; }
+.version-list h3 a {
+  text-decoration: none;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-link-underline);
+}
+.version-list h3 a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.version-meta {
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+  margin: 0.4rem 0 0;
+}
+.version-meta a {
+  color: var(--color-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-rule-bold);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  font-family: var(--sans);
   font-size: 0.95rem;
 }
-
-th,
-td {
-  padding: 0.5rem 0.6rem;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-  vertical-align: top;
+.contact-list a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-link-underline);
 }
 
-code {
-  padding: 0.1rem 0.25rem;
-  border-radius: 4px;
-  background: #eef2f7;
-  font-size: 0.92em;
+/* -------- Focus, accessibility -------- */
+
+a:focus-visible,
+.skip-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-bottom-color: transparent;
 }
 
-@media screen {
-  body {
-    border-top: 6px solid var(--accent);
-    background: linear-gradient(180deg, #f0f5f9 0%, #f6f8fb 120px, #f6f8fb 100%);
-  }
+/* -------- Print (A4) -------- */
 
-  h1,
-  h1 + p,
-  h1 + p + p {
-    text-align: left;
+@page {
+  size: A4;
+  margin: 18mm 18mm 22mm 18mm;
+  @bottom-center {
+    content: counter(page) " / " counter(pages);
+    font-family: "Inter Variable", system-ui, sans-serif;
+    font-size: 9pt;
+    color: #5a5a5a;
   }
-
-  h1 + p + p {
-    padding: 0.75rem 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-
-  h1 + p + p a {
-    display: inline-block;
-    margin: 0.2rem 0.35rem 0.2rem 0;
-    padding: 0.32rem 0.62rem;
-    border-radius: 999px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 0.92rem;
-  }
-
-  h1 + p + p a:hover {
-    filter: brightness(0.96);
-  }
-}
-
-@media (max-width: 720px) {
-  body {
-    padding: 32px 18px;
-  }
-
-  h2 {
-    margin-top: 2rem;
-  }
-
-  h1 + p + p a {
-    display: inline-block;
-    margin-bottom: 0.35rem;
+  @bottom-left {
+    content: "Sebastian Mendel — CV";
+    font-family: "Inter Variable", system-ui, sans-serif;
+    font-size: 9pt;
+    color: #5a5a5a;
   }
 }
 
 @media print {
-  body {
-    max-width: none;
-    padding: 1.4cm;
-    color: #000;
-    background: #fff;
-    font-size: 10.5pt;
-    line-height: 1.45;
-    border-top: 0;
-  }
+  html { font-size: 10.5pt; background: #fff; }
+  body { background: #fff; color: #000; }
+  .skip-link { display: none !important; }
+  .cv { padding: 0; max-width: none; }
+  .cv-header { margin-bottom: 1.2rem; }
+  .cv-header h1 { font-size: 22pt; }
+  .cv-header .role { font-size: 11pt; }
+  .cv-header .location { margin-bottom: 0.4rem; }
+  .meta-nav { display: none; }
+  .cv-footer { display: none; }
 
-  body > * {
-    max-width: none;
-  }
-
-  h1 {
-    font-size: 22pt;
-  }
-
-  h2 {
-    margin-top: 1.2rem;
-    break-after: avoid;
+  .cv-body h2 {
+    font-size: 9pt;
+    margin: 1.4rem 0 0.5rem;
     page-break-after: avoid;
+    break-after: avoid;
   }
-
-  h3,
-  table,
-  ul,
-  p {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  .cv-body h3 {
+    font-size: 11pt;
+    margin: 0.8rem 0 0.1rem;
+    page-break-after: avoid;
+    break-after: avoid;
   }
+  .cv-body h4 { font-size: 9.5pt; }
+  .cv-body p, .cv-body li { font-size: 10.5pt; }
 
-  a {
-    color: inherit;
+  .cv-body ul, .cv-body ol, .cv-body p { orphans: 3; widows: 3; }
+  .cv-body li { break-inside: avoid; page-break-inside: avoid; }
+
+  .cv-body a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    color: #5a5a5a;
+    font-size: 0.85em;
+  }
+  .cv-body a {
+    border-bottom: none;
+    color: #000;
     text-decoration: none;
-  }
-
-  h1 + p + p {
-    border: 0;
-    padding: 0;
-  }
-
-  h1 + p + p a {
-    padding: 0;
-    background: transparent;
   }
 }
