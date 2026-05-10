@@ -77,6 +77,16 @@ Langjährige Beiträge in mehreren Ökosystemen mit Fokus auf wartbare Entwicklu
 - **Eigene Repos** — `kidsync` (Privacy-First Co-Parenting App, Kotlin, E2EE), `wow-quickroute` (Lua), `typo3-extension-analyzer-skill`
 - GitHub: **github.com/CybotTM** (40+ public repos, aktiv seit 2010)
 
+## Veröffentlichungen
+
+[**Engineering Notes**](https://cybottm.github.io/engineering-notes/) — kuratierte Essays und Field Notes zu langlebigen technischen Strukturen, AI-assisted Engineering, Security/Supply-Chain, Plattformarchitektur und Dokumentationskultur. Auswahl:
+
+- *Optimizing Claude Code Usage: Cache-Read Inflation* — Statusline, Hooks und Memory-Regeln gegen quadratische Token-Kosten in langen Coding-Sessions
+- *Supply-Chain-Attacken am Beispiel Shai-Hulud* — npm-Wurm-Angriff, Container-First-Verteidigung, gelebte Compliance
+- *Agentic Coding Requires Repeated Review Cycles* — methodische Reviews als Mitigation für probabilistische Codegenerierung
+- *PHP FFI – was, warum, wann?* — Performance via Rust + FFI am Beispiel eines XLIFF-Imports (1.400 → 35.320 Datensätze/Sek)
+- *Playwright MCP – Cheat Sheet* — Praxis-Referenz für browsergestützte LLM-Automatisierung
+
 ## Sprachen
 
 - Deutsch: Muttersprache
