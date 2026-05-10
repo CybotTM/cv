@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
-
 :root {
-  --nr-turquoise: #2F99A4;
-  --nr-orange: #FF4D00;
+  --nr-turquoise: #2f99a4;
+  --nr-orange: #ff4d00;
   --nr-dark: #585961;
   --nr-light: #f7f8f9;
 }
@@ -10,7 +8,7 @@
 * { box-sizing: border-box; }
 
 body {
-  font-family: 'Open Sans', -apple-system, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 10.5pt;
   line-height: 1.55;
   color: var(--nr-dark);
@@ -21,29 +19,28 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: var(--nr-dark);
 }
 
 h1 {
-  font-size: 28pt;
-  margin: 0 0 4px;
+  font-size: 24pt;
+  margin: 0 0 6px;
   border-bottom: 4px solid var(--nr-turquoise);
   padding-bottom: 8px;
 }
 
 h1 + p strong {
   color: var(--nr-turquoise);
-  font-size: 13pt;
+  font-size: 12pt;
   font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 h2 {
-  font-size: 16pt;
+  font-size: 15pt;
   color: var(--nr-turquoise);
-  margin-top: 28px;
+  margin-top: 26px;
   margin-bottom: 8px;
   padding-bottom: 4px;
   border-bottom: 1px solid #e5e7e9;
@@ -51,12 +48,9 @@ h2 {
 
 h3 {
   font-size: 12pt;
-  color: var(--nr-dark);
   margin-top: 18px;
   margin-bottom: 4px;
 }
-
-h3 strong { color: var(--nr-orange); }
 
 a {
   color: var(--nr-turquoise);
@@ -66,8 +60,6 @@ a {
 
 ul, ol { padding-left: 20px; margin: 6px 0 12px; }
 li { margin-bottom: 3px; }
-
-strong { color: var(--nr-dark); font-weight: 600; }
 
 table {
   border-collapse: collapse;
@@ -82,7 +74,6 @@ th {
   font-weight: 600;
   text-align: left;
   padding: 6px 10px;
-  font-family: 'Raleway', sans-serif;
 }
 
 td {
@@ -93,33 +84,36 @@ td {
 
 tr:nth-child(even) td { background: var(--nr-light); }
 
-hr {
-  border: none;
-  height: 1px;
-  background: #e5e7e9;
-  margin: 24px 0;
-}
-
-code {
+pre, code {
   background: var(--nr-light);
-  padding: 1px 5px;
   border-radius: 3px;
-  font-size: 9.5pt;
-  color: var(--nr-orange);
-}
-
-em { color: #888; font-style: italic; }
-
-blockquote {
-  border-left: 3px solid var(--nr-orange);
-  margin-left: 0;
-  padding-left: 14px;
-  color: #777;
 }
 
 @media print {
-  body { padding: 16px; max-width: none; }
-  h2 { page-break-after: avoid; }
-  h3 { page-break-after: avoid; }
-  table { page-break-inside: avoid; }
+  body {
+    font-size: 10pt;
+    padding: 12mm;
+    max-width: none;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  p, ul, ol, table, blockquote {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    border-bottom: none;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+  }
 }

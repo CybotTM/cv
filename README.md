@@ -1,25 +1,32 @@
-# Lebenslauf — Sebastian Mendel
+# CV as Code
 
-Lebenslauf von Sebastian Mendel, CTO bei [Netresearch DTT GmbH](https://www.netresearch.de/), Leipzig.
+This repository contains a source-controlled CV workflow.
 
-## Inhalt
+## Principles
 
-- [`lebenslauf-sebastian-mendel.md`](./lebenslauf-sebastian-mendel.md) — Lebenslauf in Markdown (Quelle)
-- [`lebenslauf-sebastian-mendel.html`](./lebenslauf-sebastian-mendel.html) — gerenderte HTML-Fassung
-- [`style.css`](./style.css) — Stylesheet (Netresearch-Brand-Farben, druckoptimiert)
+- Markdown files in `src/` are the source of truth.
+- Public HTML/PDF files in `public/` are generated artifacts.
+- Private/source-detailed content remains separated from public variants.
 
-## Rendern
+## Build requirements
+
+- `pandoc`
+- `weasyprint`
+- `make`
+
+## Commands
 
 ```bash
-pandoc lebenslauf-sebastian-mendel.md \
-  -f markdown -t html5 \
-  --standalone \
-  --metadata title="Sebastian Mendel — Lebenslauf" \
-  --metadata lang="de" \
-  --css=style.css \
-  -o lebenslauf-sebastian-mendel.html
+make build
+make clean
 ```
 
-## Kontakt
+## Important files
 
-GitHub: [@CybotTM](https://github.com/CybotTM)
+- `src/cv-full.private.md`: private/full CV source
+- `src/cv-executive.de.md`: public executive CV (German)
+- `src/cv-technical.de.md`: public technical CV (German)
+- `assets/style.css`: shared stylesheet for generated HTML
+- `Makefile`: reproducible local build pipeline
+- `.github/workflows/build.yml`: CI build/check and GitHub Pages deployment
+- `public/`: generated public HTML/PDF outputs
