@@ -98,6 +98,21 @@ def render_md(body: str) -> str:
     return md.convert(body)
 
 
+def load_inline_css() -> str:
+    """Load assets/style.css and rewrite font URLs for inlining into HTML.
+
+    The source CSS sits at assets/style.css and references fonts as
+    `url("fonts/...")` (relative to the CSS). When the same CSS is inlined
+    into a `<style>` element in an HTML file at the public/ root, the
+    browser resolves URLs relative to the *HTML*, so the references must
+    become `url("assets/fonts/...")`. This matches what the
+    `<link rel=preload as=font href="assets/fonts/...">` hints already use,
+    so the preload is reused for the @font-face request.
+    """
+    css = (ASSETS / "style.css").read_text(encoding="utf-8")
+    return re.sub(r'url\((\s*"?)fonts/', r'url(\1assets/fonts/', css)
+
+
 def build_meta_links(variant: Variant, all_variants: list[Variant]) -> list[dict]:
     """Header navigation: external profiles + alternate CV variants/PDFs."""
     links: list[dict] = [
@@ -125,7 +140,13 @@ def build_meta_links(variant: Variant, all_variants: list[Variant]) -> list[dict
     return links
 
 
-def render_html(env: Environment, variant: Variant, all_variants: list[Variant], build_iso: str) -> str:
+def render_html(
+    env: Environment,
+    variant: Variant,
+    all_variants: list[Variant],
+    build_iso: str,
+    inline_css: str,
+) -> str:
     tpl = env.get_template("cv.html.j2")
     # Asset paths are relative to the HTML file. Both index.html and cv-*.de.html
     # sit at the root of public/ alongside assets/, so plain "assets/..." works
@@ -144,11 +165,17 @@ def render_html(env: Environment, variant: Variant, all_variants: list[Variant],
         meta_links=build_meta_links(variant, all_variants),
         updated_human=variant.front["updated"],
         build_iso=build_iso,
+        inline_css=inline_css,
         asset=lambda p: f"assets/{p}",
     )
 
 
-def render_index(env: Environment, all_variants: list[Variant], build_iso: str) -> str:
+def render_index(
+    env: Environment,
+    all_variants: list[Variant],
+    build_iso: str,
+    inline_css: str,
+) -> str:
     tpl = env.get_template("index.html.j2")
     canonical = f"{SITE_BASE}/"
     return tpl.render(
@@ -182,6 +209,7 @@ def render_index(env: Environment, all_variants: list[Variant], build_iso: str) 
             {"href": AUTHOR["github"], "text": "GitHub"},
         ],
         build_iso=build_iso,
+        inline_css=inline_css,
         pdf_filename=None,
         asset=lambda p: f"assets/{p}",
     )
@@ -220,9 +248,10 @@ def main() -> int:
     )
 
     build_iso = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    inline_css = load_inline_css()
 
     for v in variants:
-        html = render_html(env, v, variants, build_iso)
+        html = render_html(env, v, variants, build_iso, inline_css)
         out = PUBLIC / v.html_filename
         out.write_text(html, encoding="utf-8")
         print(f"wrote {out.relative_to(ROOT)}")
@@ -231,7 +260,7 @@ def main() -> int:
             write_pdf(out, pdf_out)
             print(f"wrote {pdf_out.relative_to(ROOT)} ({pdf_out.stat().st_size // 1024} KB)")
 
-    index_html = render_index(env, variants, build_iso)
+    index_html = render_index(env, variants, build_iso, inline_css)
     (PUBLIC / "index.html").write_text(index_html, encoding="utf-8")
     print(f"wrote public/index.html")
 
