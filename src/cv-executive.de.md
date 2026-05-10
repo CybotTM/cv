@@ -85,6 +85,10 @@ Langjähriger Open-Source-Hintergrund mit Beiträgen seit 2005. Schwerpunkt auf 
 - **Eigene Repos** — `kidsync` (Privacy-First Co-Parenting App, Kotlin, E2EE), `wow-quickroute` (Lua), `typo3-extension-analyzer-skill`
 - GitHub: **github.com/CybotTM** (40+ public repos, aktiv seit 2010)
 
+## Veröffentlichungen
+
+Kuratierte Essays und Field Notes unter [**Engineering Notes**](https://cybottm.github.io/engineering-notes/) — Themen u.a. AI-assisted Engineering, Engineering Governance, Open-Source-Maintainership, Plattformarchitektur, Security und Dokumentationskultur.
+
 ## Technologiefelder
 
 - **Languages:** PHP, Go, Python, TypeScript, JavaScript, Bash, SQL
