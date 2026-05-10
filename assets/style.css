@@ -46,9 +46,9 @@
            Roboto, "Helvetica Neue", sans-serif;
 
   --color-page:    #fbfaf6;
-  --color-text:    #1a1a1a;     /* > 16:1 on page */
-  --color-muted:   #5a5a5a;     /* > 7:1  on page */
-  --color-accent:  #7d2d3a;     /* deep wine, > 5.7:1 on page */
+  --color-text:    #1a1a1a;     /* 16.7:1 on page (AAA 1.4.6) */
+  --color-muted:   #4d4d4d;     /*  8.1:1 on page (AAA 1.4.6) — was #5a5a5a (6.86:1, AA only) */
+  --color-accent:  #7d2d3a;     /* 10.7:1 on page (AAA 1.4.6) */
   --color-rule:    rgba(0, 0, 0, 0.10);
   --color-rule-bold: rgba(0, 0, 0, 0.18);
   --color-link-underline: rgba(125, 45, 58, 0.45);
@@ -164,20 +164,30 @@ body {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 1rem;
+  /* tight gap, since each link's padding contributes to spacing */
+  gap: 0 0.4rem;
   font-family: var(--sans);
   font-size: var(--fs-small);
 }
 
+/* WCAG 2.5.5 AAA Target Size (44 CSS px). At fs-small (0.85rem ≈ 15.3 px)
+   with line-height 1.62, the inline-block hit area is 0.55rem × 2 padding
+   plus a ~24.8 px line box → ~44.6 px tall; horizontal padding plus the
+   reduced container gap puts the hit area comfortably above 44 px wide. */
 .meta-links a {
+  display: inline-block;
+  padding: 0.55rem 0.4rem;
+  border-radius: 4px;
   color: var(--color-text);
-  text-decoration: none;
-  border-bottom: 1px solid var(--color-link-underline);
-  padding-bottom: 1px;
+  text-decoration: underline;
+  text-decoration-color: var(--color-link-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
 }
 .meta-links a[aria-current="page"] {
   color: var(--color-accent);
   font-weight: 600;
+  text-decoration-color: currentColor;
 }
 
 /* -------- Body -------- */
@@ -303,11 +313,27 @@ body {
   font-size: var(--fs-small);
   color: var(--color-muted);
   margin: 0.4rem 0 0;
+  /* extra line-height absorbs the padded-link vertical extent without an
+     awkwardly tall paragraph */
+  line-height: 2.4;
 }
+/* WCAG 2.5.5 AAA Target Size — see comment on .meta-links a.
+   border-bottom: 0 cancels the .cv-body a underline so only the
+   text-decoration line (which tracks the text, not the padded box) shows. */
 .version-meta a {
+  display: inline-block;
+  padding: 0.55rem 0.4rem;
+  border-radius: 4px;
+  border-bottom: 0;
   color: var(--color-muted);
-  text-decoration: none;
-  border-bottom: 1px solid var(--color-rule-bold);
+  text-decoration: underline;
+  text-decoration-color: var(--color-rule-bold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.version-meta a:hover,
+.version-meta a:focus {
+  background: rgba(0, 0, 0, 0);  /* override .cv-body a:hover background */
 }
 
 .contact-list {
@@ -316,14 +342,26 @@ body {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 1.2rem;
+  gap: 0 0.4rem;
   font-family: var(--sans);
   font-size: 0.95rem;
 }
+/* WCAG 2.5.5 AAA Target Size — at 0.95rem font-size with line-height 1.62
+   the line-box is ~27.7 px; padding 0.5rem each side gives ~45.7 px tall. */
 .contact-list a {
+  display: inline-block;
+  padding: 0.5rem 0.4rem;
+  border-radius: 4px;
+  border-bottom: 0;  /* override .cv-body a's border-bottom */
   color: var(--color-text);
-  text-decoration: none;
-  border-bottom: 1px solid var(--color-link-underline);
+  text-decoration: underline;
+  text-decoration-color: var(--color-link-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.contact-list a:hover,
+.contact-list a:focus {
+  background: rgba(0, 0, 0, 0);
 }
 
 /* -------- Focus, accessibility -------- */
