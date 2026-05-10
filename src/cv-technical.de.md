@@ -13,7 +13,7 @@ og_locale: de_DE
 
 ## Profil
 
-CTO seit 2015 mit Schwerpunkt auf Engineering Governance, Plattformstrategie, Delivery-Modernisierung und operativ belastbaren Betriebsmodellen. Verbindet tiefes technisches Verständnis mit langfristiger Organisationsentwicklung in Enterprise-, Public-Sector-, CMS-, Commerce- und Integrationskontexten.
+CTO seit 2015 mit Schwerpunkt auf Engineering Governance, Plattformstrategie, Delivery-Modernisierung und operativ belastbaren Betriebsmodellen. Verbindet tiefes technisches Verständnis mit langfristiger Organisationsentwicklung: Wissen sichtbar machen, implizite Abhängigkeiten reduzieren, technische Entscheidungsprozesse strukturieren und Teams durch robuste Plattformen, Dokumentation und wiederholbare Prozesse entlasten.
 
 ## Kernkompetenzen
 
@@ -34,13 +34,16 @@ CTO seit 2015 mit Schwerpunkt auf Engineering Governance, Plattformstrategie, De
 Ausgewählte Beiträge:
 
 - Governance und technische Weiterentwicklung einer zentralen Engineering-Plattform
+- Systematischer Abbau von Wissenssilos durch technische Dokumentation, interne Wissensbasis, RFC-Prozesse und wiederverwendbare Engineering-Standards
+- Aufbau resilienter Betriebs- und Delivery-Strukturen zur Reduktion von Schlüsselpersonenrisiken und operativen Engpässen
 - Modernisierung von Delivery-, Build-, Release- und Backup-Prozessen
 - Einführung strukturierter Architekturentscheidungen und technischer RFC-Prozesse (Initiator des unternehmensweiten T3-RFC-Verfahrens)
 - Curriculum-Design und persönliche Durchführung eines mehrwöchigen Trainingsprogramms „Best Practices für agentische Entwicklung" für das Engineering-Team
 - Aufbau einer internen AI-Tooling-Plattform (Skill-Marketplace, eigene Composer-Distribution)
+- Analyse, Bewertung und Operationalisierung neuer Technologien mit Fokus auf Nachvollziehbarkeit, Risiken, Wiederholbarkeit und Team-Enablement
 - Betriebs- und Incident-Unterstützung in kritischem Kundenumfeld
 - Technische Beratung in Presales, Roadmaps und Modernisierungsprogrammen
-- Aufbau und Pflege einer internen technischen Wissensbasis (50+ Artikel zu Engineering-, Sicherheits- und AI-Themen seit 2020)
+- Aufbau und Pflege einer internen technischen Wissensbasis mit 50+ Artikeln zu Engineering-, Sicherheits-, Betriebs- und AI-Themen zur Reduktion impliziter Wissensabhängigkeiten
 
 ### phpMyAdmin (2005–2015)
 
