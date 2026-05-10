@@ -28,7 +28,7 @@ jobs:
           sudo apt-get install -y pandoc weasyprint make
 
       - name: Build
-        run: make build
+        run: PANDOC=__missing_pandoc__ WEASYPRINT=__missing_weasyprint__ make build
 
       - name: Verify committed public artifacts
         run: git diff --exit-code public/
