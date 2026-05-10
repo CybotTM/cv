@@ -127,6 +127,9 @@ def build_meta_links(variant: Variant, all_variants: list[Variant]) -> list[dict
 
 def render_html(env: Environment, variant: Variant, all_variants: list[Variant], build_iso: str) -> str:
     tpl = env.get_template("cv.html.j2")
+    # Asset paths are relative to the HTML file. Both index.html and cv-*.de.html
+    # sit at the root of public/ alongside assets/, so plain "assets/..." works
+    # for every page; "../assets/..." would escape the project subpath on Pages.
     return tpl.render(
         variant=variant.front["variant"],
         lang=variant.front["lang"],
@@ -141,7 +144,7 @@ def render_html(env: Environment, variant: Variant, all_variants: list[Variant],
         meta_links=build_meta_links(variant, all_variants),
         updated_human=variant.front["updated"],
         build_iso=build_iso,
-        asset=lambda p: f"../assets/{p}",
+        asset=lambda p: f"assets/{p}",
     )
 
 

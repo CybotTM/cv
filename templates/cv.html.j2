@@ -1,6 +1,9 @@
 {% extends "base.html.j2" %}
 {% block body %}
-<article class="cv cv--{{ variant }}">
+{# <main> may not be a descendant of <article>, <aside>, <footer>, <header>,
+   or <nav> per the HTML spec, so the layout wrapper is a plain <div>. The CV
+   itself is wrapped in <article> inside <main>. #}
+<div class="cv cv--{{ variant }}">
   <header class="cv-header">
     <p class="kicker">Curriculum Vitae · Stand {{ updated_human }}</p>
     <h1>{{ author.name }}</h1>
@@ -21,8 +24,10 @@
     </nav>
   </header>
 
-  <main id="main" class="cv-body">
-    {{ body | safe }}
+  <main id="main">
+    <article class="cv-body">
+      {{ body | safe }}
+    </article>
   </main>
 
   <footer class="cv-footer">
@@ -33,5 +38,5 @@
       </small>
     </p>
   </footer>
-</article>
+</div>
 {% endblock %}
