@@ -3,3 +3,16 @@
 *.bak
 dist/
 src/*private*
+
+# Build artifacts (regenerated in CI)
+public/
+
+# Local Python build env
+.venv/
+.venv-build/
+__pycache__/
+*.pyc
+
+# Lighthouse local reports
+lighthouse-*.html
+.lighthouseci/

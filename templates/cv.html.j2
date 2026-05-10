@@ -1,0 +1,37 @@
+{% extends "base.html.j2" %}
+{% block body %}
+<article class="cv cv--{{ variant }}">
+  <header class="cv-header">
+    <p class="kicker">Curriculum Vitae · Stand {{ updated_human }}</p>
+    <h1>{{ author.name }}</h1>
+    <p class="role">{{ author.role }}</p>
+    <p class="location">{{ author.location }}</p>
+
+    <nav class="meta-nav" aria-label="Kontakt und alternative Versionen">
+      <ul class="meta-links">
+        {% for link in meta_links %}
+        <li>
+          <a href="{{ link.href }}"
+             {% if link.get('rel') %}rel="{{ link.rel }}"{% endif %}
+             {% if link.get('aria') %}aria-label="{{ link.aria }}"{% endif %}
+             {% if link.get('current') %}aria-current="page"{% endif %}>{{ link.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="cv-body">
+    {{ body | safe }}
+  </main>
+
+  <footer class="cv-footer">
+    <p>
+      <small>
+        Stand {{ updated_human }} · gebaut {{ build_iso }} ·
+        <a href="https://github.com/CybotTM/cv">Quelltext auf GitHub</a>
+      </small>
+    </p>
+  </footer>
+</article>
+{% endblock %}

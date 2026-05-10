@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SM monogram">
+  <rect width="64" height="64" rx="10" fill="#fbfaf6"/>
+  <text x="50%" y="58%" text-anchor="middle"
+        font-family="ui-serif, Charter, Iowan Old Style, Cambria, Georgia, serif"
+        font-size="34" font-weight="600" fill="#7d2d3a"
+        dominant-baseline="middle">SM</text>
+</svg>
