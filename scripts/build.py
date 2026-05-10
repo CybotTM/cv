@@ -38,22 +38,159 @@ AUTHOR = {
     "github": "https://github.com/CybotTM",
 }
 
-JSONLD = {
-    "@context": "https://schema.org",
+PERSON_ID = f"{SITE_BASE}/#person"
+WEBSITE_ID = f"{SITE_BASE}/#website"
+
+PERSON_JSONLD = {
     "@type": "Person",
+    "@id": PERSON_ID,
     "name": AUTHOR["name"],
     "givenName": AUTHOR["first_name"],
     "familyName": AUTHOR["last_name"],
     "jobTitle": AUTHOR["role"],
-    "address": {"@type": "PostalAddress", "addressLocality": "Leipzig", "addressCountry": "DE"},
+    "description": (
+        "Chief Technology Officer und Senior Engineering Leader mit über 25 "
+        "Jahren IT-Erfahrung. Schwerpunkte: Engineering-Governance, "
+        "Plattformarchitektur und Modernisierung komplexer Systemlandschaften."
+    ),
+    "url": f"{SITE_BASE}/",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Leipzig",
+        "addressCountry": "DE",
+    },
     "worksFor": {
         "@type": "Organization",
         "name": "Netresearch DTT GmbH",
         "url": "https://www.netresearch.de/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Leipzig",
+            "addressCountry": "DE",
+        },
     },
-    "url": f"{SITE_BASE}/",
+    "alumniOf": [
+        {
+            "@type": "EducationalOrganization",
+            "name": "Staatliche Berufsschule Erlangen",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Erlangen",
+                "addressCountry": "DE",
+            },
+        },
+    ],
+    "knowsLanguage": [
+        {"@type": "Language", "name": "Deutsch", "alternateName": "de"},
+        {"@type": "Language", "name": "Englisch", "alternateName": "en"},
+    ],
+    "knowsAbout": [
+        "Engineering Governance",
+        "Platform Architecture",
+        "Technical Modernization",
+        "Architecture Decisions",
+        "RFC Process",
+        "Information Security",
+        "Compliance",
+        "Disaster Recovery",
+        "Business Continuity",
+        "Continuous Integration",
+        "Continuous Delivery",
+        "DevOps",
+        "Open Source",
+        "TYPO3",
+        "Magento",
+        "OroCommerce",
+        "Shopware",
+        "Akeneo",
+        "PHP",
+        "Go",
+        "Python",
+        "TypeScript",
+        "JavaScript",
+        "Bash",
+        "SQL",
+        "Linux",
+        "Docker",
+        "GitLab",
+        "Concourse CI",
+        "Proxmox",
+        "AWS",
+        "AI-assisted Engineering",
+        "Agentic Development",
+    ],
+    "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Chief Technology Officer",
+        "occupationLocation": {"@type": "City", "name": "Leipzig"},
+        "experienceRequirements": "25+ years IT, 10+ years CTO",
+        "skills": (
+            "Engineering governance, platform architecture, technical "
+            "modernization, security and compliance documentation, "
+            "AI-assisted engineering practices"
+        ),
+    },
     "sameAs": [AUTHOR["linkedin"], AUTHOR["github"]],
 }
+
+WEBSITE_JSONLD = {
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    "url": f"{SITE_BASE}/",
+    "name": f"{AUTHOR['name']} — Curriculum Vitae",
+    "inLanguage": "de",
+    "publisher": {"@id": PERSON_ID},
+}
+
+
+def page_jsonld(page_id: str, url: str, name: str, lang: str, updated_iso: str,
+                breadcrumb: dict | None = None) -> dict:
+    """Build a `@graph` JSON-LD payload for a single page.
+
+    Each page gets a ProfilePage node referencing the shared Person and
+    WebSite by `@id`. CV variant pages also get a BreadcrumbList. The
+    schema.org/ProfilePage type is the canonical type for personal-profile
+    pages and is supported by Google rich results since 2023.
+    """
+    profile = {
+        "@type": "ProfilePage",
+        "@id": page_id,
+        "url": url,
+        "name": name,
+        "inLanguage": lang,
+        "dateModified": updated_iso,
+        "isPartOf": {"@id": WEBSITE_ID},
+        "about": {"@id": PERSON_ID},
+        "mainEntity": {"@id": PERSON_ID},
+    }
+    if breadcrumb is not None:
+        profile["breadcrumb"] = {"@id": breadcrumb["@id"]}
+
+    graph = [profile, PERSON_JSONLD, WEBSITE_JSONLD]
+    if breadcrumb is not None:
+        graph.append(breadcrumb)
+    return {"@context": "https://schema.org", "@graph": graph}
+
+
+def variant_breadcrumb(variant: "Variant") -> dict:
+    return {
+        "@type": "BreadcrumbList",
+        "@id": f"{variant.canonical}#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Übersicht",
+                "item": f"{SITE_BASE}/",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": variant.front["short_label"] + " CV",
+                "item": variant.canonical,
+            },
+        ],
+    }
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n(.*)$", re.DOTALL)
 
@@ -148,6 +285,15 @@ def render_html(
     inline_css: str,
 ) -> str:
     tpl = env.get_template("cv.html.j2")
+    breadcrumb = variant_breadcrumb(variant)
+    jsonld = page_jsonld(
+        page_id=f"{variant.canonical}#profilepage",
+        url=variant.canonical,
+        name=variant.front["title"],
+        lang=variant.front["lang"],
+        updated_iso=build_iso,
+        breadcrumb=breadcrumb,
+    )
     # Asset paths are relative to the HTML file. Both index.html and cv-*.de.html
     # sit at the root of public/ alongside assets/, so plain "assets/..." works
     # for every page; "../assets/..." would escape the project subpath on Pages.
@@ -159,7 +305,7 @@ def render_html(
         canonical=variant.canonical,
         og_locale=variant.front.get("og_locale", "de_DE"),
         author=AUTHOR,
-        jsonld=json.dumps(JSONLD, ensure_ascii=False),
+        jsonld=json.dumps(jsonld, ensure_ascii=False),
         body=render_md(variant.body_md),
         pdf_filename=variant.pdf_filename,
         meta_links=build_meta_links(variant, all_variants),
@@ -178,9 +324,17 @@ def render_index(
 ) -> str:
     tpl = env.get_template("index.html.j2")
     canonical = f"{SITE_BASE}/"
+    title = f"{AUTHOR['name']} — Curriculum Vitae"
+    jsonld = page_jsonld(
+        page_id=f"{canonical}#profilepage",
+        url=canonical,
+        name=title,
+        lang="de",
+        updated_iso=build_iso,
+    )
     return tpl.render(
         lang="de",
-        title=f"{AUTHOR['name']} — Curriculum Vitae",
+        title=title,
         description=(
             f"{AUTHOR['name']}, {AUTHOR['role']} in {AUTHOR['location']}. "
             "Lebenslauf in zwei Varianten: Executive (kurz, leitungsorientiert) "
@@ -189,7 +343,7 @@ def render_index(
         canonical=canonical,
         og_locale="de_DE",
         author=AUTHOR,
-        jsonld=json.dumps(JSONLD, ensure_ascii=False),
+        jsonld=json.dumps(jsonld, ensure_ascii=False),
         lede=(
             f"{AUTHOR['role']} bei Netresearch DTT GmbH, Leipzig. "
             "Über 25 Jahre IT-Erfahrung mit Schwerpunkt auf Engineering-Governance, "
