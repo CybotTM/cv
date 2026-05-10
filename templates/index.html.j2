@@ -9,9 +9,7 @@
   </header>
 
   <main id="main" class="cv-body">
-    <section>
-      <p class="lede">{{ lede }}</p>
-    </section>
+    <p class="lede">{{ lede }}</p>
 
     <section aria-labelledby="versions-heading">
       <h2 id="versions-heading">Versionen</h2>
@@ -20,8 +18,12 @@
         <li>
           <h3><a href="{{ v.html }}">{{ v.title }}</a></h3>
           <p>{{ v.description }}</p>
+          {# Each link's accessible name includes the variant title so the
+             two "Online lesen" / "PDF herunterladen" pairs do not have
+             identical link text — WCAG 2.4.9 AAA Link Purpose (Link Only),
+             WCAG 3.2.4 AA Consistent Identification. #}
           <p class="version-meta">
-            <a href="{{ v.html }}">Online lesen</a> ·
+            <a href="{{ v.html }}" aria-label="{{ v.title }} online lesen">Online lesen</a> ·
             <a href="{{ v.pdf }}" aria-label="{{ v.title }} als PDF herunterladen">PDF herunterladen</a>
           </p>
         </li>
