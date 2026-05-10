@@ -35,9 +35,12 @@ Ausgewählte Beiträge:
 
 - Governance und technische Weiterentwicklung einer zentralen Engineering-Plattform
 - Modernisierung von Delivery-, Build-, Release- und Backup-Prozessen
-- Einführung strukturierter Architekturentscheidungen und technischer RFC-Prozesse
+- Einführung strukturierter Architekturentscheidungen und technischer RFC-Prozesse (Initiator des unternehmensweiten T3-RFC-Verfahrens)
+- Curriculum-Design und persönliche Durchführung eines mehrwöchigen Trainingsprogramms „Best Practices für agentische Entwicklung" für das Engineering-Team
+- Aufbau einer internen AI-Tooling-Plattform (Skill-Marketplace, eigene Composer-Distribution)
 - Betriebs- und Incident-Unterstützung in kritischem Kundenumfeld
 - Technische Beratung in Presales, Roadmaps und Modernisierungsprogrammen
+- Aufbau und Pflege einer internen technischen Wissensbasis (50+ Artikel zu Engineering-, Sicherheits- und AI-Themen seit 2020)
 
 ### phpMyAdmin (2005–2015)
 
@@ -61,7 +64,15 @@ Ausbildung Fachinformatik Systemintegration mit Schwerpunkt Web, Datenbanken, Ha
 
 ## Open Source
 
-Langjährige Beiträge im phpMyAdmin- und TYPO3-Ökosystem mit Fokus auf technische Dokumentation, Tooling und wartbare Entwicklungsprozesse.
+Langjährige Beiträge in mehreren Ökosystemen mit Fokus auf wartbare Entwicklungsprozesse, technische Dokumentation und nachhaltige Maintainership.
+
+- **phpMyAdmin** (2005–2015) — Core-Beiträge zu MySQL/SQL-Funktionalität, PHP-Backend, Dokumentation
+- **TYPO3-Ökosystem** — Beiträge zu Documentation Tooling (`phpDocumentor/guides`, `codesnippet`, `t3docs-ci-deploy`, `t3docs-search-indexer`), Extension-Tooling und Skills (`typo3-extension-analyzer-skill`, `typo3-update-issues`, `dxp-frontend`); aktiv in der TYPO3 User Group Leipzig (TUGLE)
+- **Maintainership** — `netresearch/ldap-manager` (Go, LDAP-Operations), `netresearch/ofelia` (Docker-Job-Scheduler), `netresearch/go-cron` (DAG-Engine, `@triggered`-Erweiterungen), `netresearch/claude-code-marketplace`
+- **Matrix-Ökosystem** — Beiträge zu `matrix-docker-ansible-deploy`
+- **Sonstige OSS** — Beiträge u.a. zu `hybridauth/hybridauth`, `repowise-dev/repowise`, `gofiber/cli`, `Seagate/cloudfuse`, `traefik`, `weaviate`, `ddev`, `raybeam`, `ocf-scheduler`
+- **Eigene Repos** — `kidsync` (Privacy-First Co-Parenting App, Kotlin, E2EE), `wow-quickroute` (Lua), `typo3-extension-analyzer-skill`
+- GitHub: **github.com/CybotTM** (40+ public repos, aktiv seit 2010)
 
 ## Sprachen
 
