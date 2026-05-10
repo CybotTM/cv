@@ -35,7 +35,10 @@
   <link rel="preload" as="font" type="font/woff2"
         href="{{ asset('fonts/Inter-Variable.woff2') }}" crossorigin>
 
-  <link rel="stylesheet" href="{{ asset('style.css') }}">
+  {# Inlined to drop the render-blocking external CSS request. The same
+     style.css is still written to public/assets/style.css for any direct
+     consumer (e.g. the PDF build, or hot-linking). #}
+  <style>{{ inline_css | safe }}</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Direkt zum Inhalt springen</a>
