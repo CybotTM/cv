@@ -15,6 +15,8 @@ og_locale: de_DE
 
 CTO und Senior Engineering Leader mit über 25 Jahren IT-Erfahrung. Schwerpunkt: Aufbau resilienter technischer Organisationen, Engineering-Governance, Plattformarchitektur, Modernisierung komplexer Systemlandschaften sowie sichere und pragmatische Einführung neuer Entwicklungsmethoden.
 
+Verantwortungsbereich: technologische Strategie, technische Pre-Sales-Beratung, teamübergreifende Engineering-Organisation, unternehmensweite Entwicklungs-Guidelines sowie Organisation, Beschaffung und Budgetverantwortung der internen IT-Plattform.
+
 Erfahrung in Enterprise-, Public-Sector-, E-Commerce-, CMS- und Integrationsumfeldern. Langjähriger Open-Source-Hintergrund, unter anderem im phpMyAdmin- und TYPO3-Ökosystem.
 
 ## Was mich antreibt
@@ -43,17 +45,21 @@ Dazu gehört für mich auch, technische Black Boxes zu öffnen: neue Werkzeuge, 
 ### Netresearch DTT GmbH / Netresearch, Leipzig
 
 **Chief Technology Officer** · seit 2015  
-**Senior Developer / Team Lead Support** · 2008–2018
+**Head of Operations / Teamleiter Support** · 2011–2016 (parallel)  
+**Senior Developer** · 2008–2018 (parallel)
 
-Verantwortung für technische Strategie, Engineering-Governance und Plattformarchitektur eines mittelständischen IT-Dienstleisters mit Enterprise-, Public-Sector-, E-Commerce-, CMS- und Integrationsprojekten.
+Verantwortung für technische Strategie, Engineering-Governance und Plattformarchitektur eines mittelständischen IT-Dienstleisters mit Enterprise-, Public-Sector-, E-Commerce-, CMS- und Integrationsprojekten. Strategisch-technischer Lead der internen IT-Plattform durchgängig; operative IT-Team-Verantwortung 2011–2016 als Head of Operations selbst getragen und seit 2024 nach Weggang des Head of IT wieder vollumfänglich übernommen.
 
 Ausgewählte Wirkung:
 
 - Aufbau und Governance zentraler Engineering-Plattformen für CI/CD, Secrets, IAM, Kommunikation, Monitoring und Virtualisierung
-- Einführung strukturierter Architekturentscheidungen und technischer RFC-Prozesse
-- Modernisierung unternehmenskritischer Delivery-, Backup- und Betriebsprozesse
-- Sicherheits- und Compliance-Dokumentation für regulierte Enterprise- und Public-Sector-Umfelder
-- Strukturierte Einführung AI-unterstützter Engineering-Praktiken mit Fokus auf Governance, Wiederholbarkeit, Qualität und Entwicklerproduktivität
+- Initiator eines RFC-Verfahrens für TYPO3-Entwicklungsentscheidungen bei Netresearch und Erstautor des ersten RFC
+- Konzeption und Pflege einer ISMS-nahen Dokumentensuite (25+ Richtlinien zu DR/BCP, Incident-, Change-, Patch-Management, Network Hardening, Secure Coding, Access Control u. a.) als Grundlage für Third-Party-Control-Assessments von Enterprise-Kunden
+- Erstellung kundenspezifischer Sicherheitskonzepte (TYPO3 in AWS nach IT-Grundschutz und C5; BSI-Grundschutz für einen EVB-IT-Cloudvertrag im Public Sector)
+- Strategische Treiberrolle bei Migration der internen Virtualisierungsplattform (VMware ESX → Proxmox) und konzernweiter CI/CD-Modernisierung über mehrere Kundenmandate
+- Curriculum-Design und persönliche Durchführung eines 6-wöchigen Trainingsprogramms zu agentischer Entwicklung für ein Engineering-Team mit 9 Teilnehmenden (Q1 2026)
+- Aufbau einer internen AI-Tooling-Plattform (Skill-Marketplace, Composer-Distribution, MCP-Server-Komponenten)
+- Operative Verantwortung für interne IT-Plattform, Beschaffung und IT-Budget seit 2024 (zuvor 2011–2016 als Head of Operations, dazwischen taktische Ebene an einen Head of IT delegiert)
 - Technische Beratung in Presales, Kundenroadmaps und Modernisierungsprogrammen
 
 ### phpMyAdmin

@@ -29,17 +29,23 @@ CTO seit 2015 mit Schwerpunkt auf Engineering Governance, Plattformstrategie, De
 ### Netresearch DTT GmbH / Netresearch, Leipzig (seit 2008)
 
 **Chief Technology Officer** · seit 2015  
-**Senior Developer / Team Lead Support** · 2008–2018
+**Head of Operations / Teamleiter Support** · 2011–2016 (parallel)  
+**Senior Developer** · 2008–2018 (parallel)
+
+Strategisch-technischer Lead der internen IT-Plattform durchgängig; operative IT-Team-Verantwortung 2011–2016 als Head of Operations selbst getragen und seit 2024 nach Weggang des Head of IT wieder vollumfänglich übernommen.
 
 Ausgewählte Beiträge:
 
-- Governance und technische Weiterentwicklung einer zentralen Engineering-Plattform
+- Governance und technische Weiterentwicklung einer zentralen Engineering-Plattform (GitLab, Concourse CI, HashiCorp Vault, Matrix, Monitoring-Stack, OPNsense, Proxmox mit Backup, Bitwarden, AWS)
 - Systematischer Abbau von Wissenssilos durch technische Dokumentation, interne Wissensbasis, RFC-Prozesse und wiederverwendbare Engineering-Standards
 - Aufbau resilienter Betriebs- und Delivery-Strukturen zur Reduktion von Schlüsselpersonenrisiken und operativen Engpässen
-- Modernisierung von Delivery-, Build-, Release- und Backup-Prozessen
-- Einführung strukturierter Architekturentscheidungen und technischer RFC-Prozesse (Initiator des unternehmensweiten T3-RFC-Verfahrens)
-- Curriculum-Design und persönliche Durchführung eines mehrwöchigen Trainingsprogramms „Best Practices für agentische Entwicklung" für das Engineering-Team
-- Aufbau einer internen AI-Tooling-Plattform (Skill-Marketplace, eigene Composer-Distribution)
+- Modernisierung von Delivery-, Build-, Release- und Backup-Prozessen; konzernübergreifende CI/CD-Modernisierung (Concourse v7 → v8) über mehrere Kundenmandate
+- Initiator eines RFC-Verfahrens für TYPO3-Entwicklungsentscheidungen bei Netresearch (Erstautor des ersten RFC)
+- Curriculum-Design und persönliche Durchführung eines 6-wöchigen Trainingsprogramms zu agentischer Entwicklung für ein Engineering-Team mit 9 Teilnehmenden (Q1 2026)
+- Aufbau einer internen AI-Tooling-Plattform (Skill-Marketplace, eigene Composer-Distribution, MCP-Server-Komponenten)
+- Konzeption und Pflege einer ISMS-nahen Dokumentensuite mit 25+ Richtlinien (Data Governance, DR/BCP, Incident-, Change-, Patch-Management, Network Hardening, Secure Coding, Access Control, Datenklassifizierung u. a.); kundenspezifische Sicherheitskonzepte nach IT-Grundschutz, C5 und BSI-Grundschutz
+- Hypervisor-Migration als Epic-Eigentümer: VMware ESX → Proxmox inkl. VM-Konvertierung, Backup-Integration und Storage-/Netzwerk-Nachfolge
+- Vollumfängliche operative Verantwortung für interne IT-Plattform, Beschaffung und IT-Budget seit 2024
 - Analyse, Bewertung und Operationalisierung neuer Technologien mit Fokus auf Nachvollziehbarkeit, Risiken, Wiederholbarkeit und Team-Enablement
 - Betriebs- und Incident-Unterstützung in kritischem Kundenumfeld
 - Technische Beratung in Presales, Roadmaps und Modernisierungsprogrammen
