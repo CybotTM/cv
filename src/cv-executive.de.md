@@ -15,7 +15,7 @@ og_locale: de_DE
 
 CTO und Senior Engineering Leader mit über 25 Jahren IT-Erfahrung. Schwerpunkt: Aufbau resilienter technischer Organisationen, Engineering-Governance, Plattformarchitektur, Modernisierung komplexer Systemlandschaften sowie sichere und pragmatische Einführung neuer Entwicklungsmethoden.
 
-Verantwortungsbereich: technologische Strategie, technische Pre-Sales-Beratung, teamübergreifende Engineering-Organisation, unternehmensweite Entwicklungs-Guidelines sowie Organisation, Beschaffung und Budgetverantwortung der internen IT-Plattform.
+Verantwortungsbereich seit 2015 (CTO): strategische und operative Gestaltung und Entwicklung in drei klar getrennten Technologiedomänen — **(1) Standard-Stack für Enterprise-Kundensysteme** (Cloud-Skalierung, Datenbanken, Caches, Reverse Proxy, Message Queue, Search, Observability), **(2) Entwicklerplattform** (Source-Control, CI/CD, Secrets, IAM, Kommunikation, Asset-Management, agentische Tools) und **(3) interne IT-Plattform** (HR-, CRM-, Identity-, Virtualisierungs-, Endpoint-, Netzwerk- und Firewall-Systeme) — sowie technische Pre-Sales-Beratung, teamübergreifende Engineering-Organisation, unternehmensweite Entwicklungs-Guidelines, IT-Beschaffung und IT-Budget. Verantwortung für das gesamte Asset-Inventar (350+ Services, 600+ Hardware-Items, 370+ User-Accounts, 70+ Lizenzen).
 
 Erfahrung in Enterprise-, Public-Sector-, E-Commerce-, CMS- und Integrationsumfeldern. Langjähriger Open-Source-Hintergrund, unter anderem im phpMyAdmin- und TYPO3-Ökosystem.
 
@@ -45,21 +45,21 @@ Dazu gehört für mich auch, technische Black Boxes zu öffnen: neue Werkzeuge, 
 ### Netresearch DTT GmbH / Netresearch, Leipzig
 
 **Chief Technology Officer** · seit 2015  
-**Head of Operations / Teamleiter Support** · 2011–2016 (parallel)  
-**Senior Developer** · 2008–2018 (parallel)
+**Head of Operations (Teamleiter Support, Kundenprojekte)** · 2011–2016 (parallel)  
+**Senior Developer (PHP/TYPO3, parallele strategische und operative Mitgestaltung von Entwicklerplattform und Kundensystem-Standardstack)** · 2008–2018
 
-Verantwortung für technische Strategie, Engineering-Governance und Plattformarchitektur eines mittelständischen IT-Dienstleisters mit Enterprise-, Public-Sector-, E-Commerce-, CMS- und Integrationsprojekten. Strategisch-technischer Lead der internen IT-Plattform durchgängig; operative IT-Team-Verantwortung 2011–2016 als Head of Operations selbst getragen und seit 2024 nach Weggang des Head of IT wieder vollumfänglich übernommen.
+Strategische und operative Verantwortung über drei Technologiedomänen (Kundensystem-Standardstack, Entwicklerplattform, interne IT-Plattform) durchgängig seit der CTO-Übernahme 2015; in der Senior-Developer-Phase parallele Mitgestaltung dieser Domänen; in der Head-of-Operations-Phase 2011–2016 zusätzlich operative Supportleitung für Kundenprojekte. Sämtliche IT- und Engineering-Entwicklungen liegen in diesem Verantwortungsbereich; 2019–Ende 2023 ergänzt durch operative IT-Unterstützung über einen Head of IT, die mit dessen Weggang Ende 2023 wegfiel.
 
 Ausgewählte Wirkung:
 
-- Aufbau und Governance zentraler Engineering-Plattformen für CI/CD, Secrets, IAM, Kommunikation, Monitoring und Virtualisierung
+- Domäne 1 — Standard-Stack für Enterprise-Kundensysteme: Cloud-Skalierungsstrategie (AWS, STACKIT), TYPO3-/Magento-Betriebsstack (MariaDB/MySQL, Redis/Valkey, Traefik, nginx, php-fpm, RabbitMQ, Solr) mit Observability (New Relic, Sentry, Instana) und Web-Analytics (Matomo); standardisierte Compose-Stacks per Kundenmandat
+- Domäne 2 — Entwicklerplattform: GitLab (self-hosted, Admin), Jira Server on-prem, Confluence Cloud, Concourse CI, HashiCorp Vault, Matrix/Synapse/Element, Bitwarden, Snipe-IT, Google Workspace, Windows AD, Claude Code und agentischer Skill-Marketplace inkl. Composer-Distribution
+- Domäne 3 — interne IT-Plattform: Personio (HR), HubSpot (CRM), Windows AD (Identity), Proxmox VE + Proxmox Backup (Virtualisierung, zuvor VMware ESX + Acronis), OPNsense (Firewall, zuvor VM, heute Hardware), ESET (Endpoint Protection)
+- Workforce-Enablement: standardisierte Mitarbeiter-Hardware (Apple, Framework, Lenovo, zuvor Fujitsu), Snipe-IT-getrackt; Migration von stationären Desktops auf mobile Endgeräte vor 2020 abgeschlossen — dadurch verlustfreie Verlagerung ins mobile Arbeiten beim ersten Corona-Lockdown; kontinuierlicher Netzwerk-Ausbau bis WiFi 6e und WiFi 7, segmentierte VLANs
+- Verantwortung für das gesamte Asset-Inventar (350+ Services, 600+ Hardware-Items, 370+ User-Accounts, 70+ Lizenzen, 37 Domains) inkl. Beschaffung, Lifecycle, Lizenzmanagement und Sustainability (Hardware-Re-Use-Programm)
 - Initiator eines RFC-Verfahrens für TYPO3-Entwicklungsentscheidungen bei Netresearch und Erstautor des ersten RFC
-- Konzeption und Pflege einer ISMS-nahen Dokumentensuite (25+ Richtlinien zu DR/BCP, Incident-, Change-, Patch-Management, Network Hardening, Secure Coding, Access Control u. a.) als Grundlage für Third-Party-Control-Assessments von Enterprise-Kunden
-- Erstellung kundenspezifischer Sicherheitskonzepte (TYPO3 in AWS nach IT-Grundschutz und C5; BSI-Grundschutz für einen EVB-IT-Cloudvertrag im Public Sector)
-- Strategische Treiberrolle bei Migration der internen Virtualisierungsplattform (VMware ESX → Proxmox) und konzernweiter CI/CD-Modernisierung über mehrere Kundenmandate
+- Konzeption und Pflege einer ISMS-nahen Dokumentensuite (25+ Richtlinien zu DR/BCP, Incident-, Change-, Patch-Management, Network Hardening, Secure Coding, Access Control u. a.) als Grundlage für Third-Party-Control-Assessments von Enterprise-Kunden; kundenspezifische Sicherheitskonzepte nach IT-Grundschutz, C5 und BSI-Grundschutz
 - Curriculum-Design und persönliche Durchführung eines 6-wöchigen Trainingsprogramms zu agentischer Entwicklung für ein Engineering-Team mit 9 Teilnehmenden (Q1 2026)
-- Aufbau einer internen AI-Tooling-Plattform (Skill-Marketplace, Composer-Distribution, MCP-Server-Komponenten)
-- Operative Verantwortung für interne IT-Plattform, Beschaffung und IT-Budget seit 2024 (zuvor 2011–2016 als Head of Operations, dazwischen taktische Ebene an einen Head of IT delegiert)
 - Technische Beratung in Presales, Kundenroadmaps und Modernisierungsprogrammen
 
 ### phpMyAdmin

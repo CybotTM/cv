@@ -29,27 +29,46 @@ CTO seit 2015 mit Schwerpunkt auf Engineering Governance, Plattformstrategie, De
 ### Netresearch DTT GmbH / Netresearch, Leipzig (seit 2008)
 
 **Chief Technology Officer** · seit 2015  
-**Head of Operations / Teamleiter Support** · 2011–2016 (parallel)  
-**Senior Developer** · 2008–2018 (parallel)
+**Head of Operations (Teamleiter Support, Kundenprojekte)** · 2011–2016 (parallel)  
+**Senior Developer (PHP/TYPO3)** · 2008–2018 (parallel, mit paralleler strategischer und operativer Mitgestaltung von Entwicklerplattform und Kundensystem-Standardstack)
 
-Strategisch-technischer Lead der internen IT-Plattform durchgängig; operative IT-Team-Verantwortung 2011–2016 als Head of Operations selbst getragen und seit 2024 nach Weggang des Head of IT wieder vollumfänglich übernommen.
+Strategische und operative Verantwortung über drei Technologiedomänen — **Standard-Stack für Enterprise-Kundensysteme**, **Entwicklerplattform** und **interne IT-Plattform** — durchgängig seit der CTO-Übernahme 2015. Sämtliche IT- und Engineering-Entwicklungen liegen in diesem Verantwortungsbereich; 2019–Ende 2023 ergänzt durch operative IT-Unterstützung über einen Head of IT, die mit dessen Weggang Ende 2023 wegfiel. In der Head-of-Operations-Phase 2011–2016 zusätzlich operative Supportleitung für Kundenprojekte.
 
-Ausgewählte Beiträge:
+Ausgewählte Beiträge — **Domäne 1: Standard-Stack für Enterprise-Kundensysteme** (was Kundenprojekte für skalierbaren TYPO3-/Magento-Betrieb brauchen):
 
-- Governance und technische Weiterentwicklung einer zentralen Engineering-Plattform (GitLab, Concourse CI, HashiCorp Vault, Matrix, Monitoring-Stack, OPNsense, Proxmox mit Backup, Bitwarden, AWS)
-- Systematischer Abbau von Wissenssilos durch technische Dokumentation, interne Wissensbasis, RFC-Prozesse und wiederverwendbare Engineering-Standards
-- Aufbau resilienter Betriebs- und Delivery-Strukturen zur Reduktion von Schlüsselpersonenrisiken und operativen Engpässen
-- Modernisierung von Delivery-, Build-, Release- und Backup-Prozessen; konzernübergreifende CI/CD-Modernisierung (Concourse v7 → v8) über mehrere Kundenmandate
-- Initiator eines RFC-Verfahrens für TYPO3-Entwicklungsentscheidungen bei Netresearch (Erstautor des ersten RFC)
-- Curriculum-Design und persönliche Durchführung eines 6-wöchigen Trainingsprogramms zu agentischer Entwicklung für ein Engineering-Team mit 9 Teilnehmenden (Q1 2026)
-- Aufbau einer internen AI-Tooling-Plattform (Skill-Marketplace, eigene Composer-Distribution, MCP-Server-Komponenten)
+- Cloud-Skalierungsstrategie und -Standardstack (AWS, STACKIT) inkl. Container-Orchestrierung (Docker Swarm, ECS)
+- Stack-Komponenten standardisiert: MariaDB/MySQL, Redis/Valkey, Traefik, nginx, php-fpm, RabbitMQ, Solr
+- Observability- und Web-Analytics-Bausteine: New Relic, Sentry, Instana, Matomo
+- Standardisierte Compose-Stacks per Kundenmandat (dev/test/staging/traefik), CI/CD- und Backup-Pipelines
+
+Ausgewählte Beiträge — **Domäne 2: Entwicklerplattform**:
+
+- GitLab (self-hosted, Admin), Concourse CI, GitHub Actions
+- Source-of-Truth-Systeme: Jira Server on-prem (mit Migrationspfad zu OpenProject in Evaluierung), Confluence Cloud
+- Secrets / Identity / IAM: HashiCorp Vault, Bitwarden, Windows AD, LDAP
+- Kommunikation und Wissensarbeit: Matrix/Synapse/Element, Google Workspace
+- Asset- und Inventarverwaltung: Snipe-IT (Hardware + Services + Lizenzen + Accounts + Domains)
+- Agentische Engineering-Plattform: Claude Code, Skill-Marketplace, Composer-Distribution, MCP-Server-Komponenten
+- Initiator eines RFC-Verfahrens für TYPO3-Entwicklungsentscheidungen (Erstautor des ersten RFC)
+- 6-wöchiges Trainingsprogramm zu agentischer Entwicklung für ein Engineering-Team mit 9 Teilnehmenden (Q1 2026)
+
+Ausgewählte Beiträge — **Domäne 3: interne IT-Plattform**:
+
+- HR/Finance/CRM: Personio, HubSpot
+- Identity und Endgeräte-Management: Windows AD, ESET Endpoint Protection On-Prem
+- Virtualisierung: Hypervisor-Migration als Epic-Eigentümer von VMware ESX → Proxmox VE; Backup-Migration Acronis → Proxmox Backup Server
+- Netzwerk: OPNsense-Firewall (zuvor VM, heute Hardware) mit IDS/IPS, VLAN-Segmentierung Server/Clients/Management/Gäste, kontinuierlicher WiFi-Ausbau bis WiFi 6e (Ubiquiti U7-PRO) und WiFi 7 (U7-PRO XG)
+- Workforce-Enablement: Lieferanten-Strategie (Apple, Framework, Lenovo, zuvor Fujitsu bis EU-Abkündigung 01-2024), standardisierte Mitarbeiter-Hardware, Migration von stationären Desktops auf mobile Endgeräte vor 2020 abgeschlossen; verlustfreie Verlagerung ins mobile Arbeiten beim ersten Corona-Lockdown
+- Verantwortung für das gesamte Asset-Inventar: 350+ Services, 600+ Hardware-Items, 370+ User-Accounts, 70+ Lizenzen, 37 Domains; Lifecycle, Lizenzmanagement, Beschaffung, Sustainability-Programm „Alte Laptops"
+
+Übergreifend:
+
 - Konzeption und Pflege einer ISMS-nahen Dokumentensuite mit 25+ Richtlinien (Data Governance, DR/BCP, Incident-, Change-, Patch-Management, Network Hardening, Secure Coding, Access Control, Datenklassifizierung u. a.); kundenspezifische Sicherheitskonzepte nach IT-Grundschutz, C5 und BSI-Grundschutz
-- Hypervisor-Migration als Epic-Eigentümer: VMware ESX → Proxmox inkl. VM-Konvertierung, Backup-Integration und Storage-/Netzwerk-Nachfolge
-- Vollumfängliche operative Verantwortung für interne IT-Plattform, Beschaffung und IT-Budget seit 2024
+- Systematischer Abbau von Wissenssilos durch technische Dokumentation, interne Wissensbasis (50+ Artikel zu Engineering-, Sicherheits-, Betriebs- und AI-Themen), RFC-Prozesse und wiederverwendbare Engineering-Standards
+- Aufbau resilienter Betriebs- und Delivery-Strukturen zur Reduktion von Schlüsselpersonenrisiken und operativen Engpässen
 - Analyse, Bewertung und Operationalisierung neuer Technologien mit Fokus auf Nachvollziehbarkeit, Risiken, Wiederholbarkeit und Team-Enablement
 - Betriebs- und Incident-Unterstützung in kritischem Kundenumfeld
 - Technische Beratung in Presales, Roadmaps und Modernisierungsprogrammen
-- Aufbau und Pflege einer internen technischen Wissensbasis mit 50+ Artikeln zu Engineering-, Sicherheits-, Betriebs- und AI-Themen zur Reduktion impliziter Wissensabhängigkeiten
 
 ### phpMyAdmin (2005–2015)
 
