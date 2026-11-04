@@ -54,6 +54,13 @@ Each `src/cv-*.de.md` has a YAML front-matter block: `variant`, `short_label`,
 The `<h1>` and tagline are rendered from `templates/cv.html.j2`, not from the MD,
 so the MD body should start at `## Profil`.
 
+### Claims and sources
+
+- Every factual claim (role, scope, period, figure) needs a source that is kept outside this repository. Look the source up before changing a claim instead of reconstructing it from memory.
+- This repository is public: the CV stays anonymous about clients, colleagues and internal documents. Client names belong only in an application-specific version, after an NDA check, and never here.
+- "Head of Operations" and "Teamleiter Support (Kundenprojekte)" name the same role (2011–2016); keep both labels.
+- The CTO responsibility since 2015 is continuous across all three technology domains. Describe 2019–2023 as operational IT support by a Head of IT under that responsibility, and 2024 onwards as continuing without it — never as a handover and a take-back, which would read as a five-year gap.
+
 ## CI / publishing
 
 - Every push and PR builds the site.
